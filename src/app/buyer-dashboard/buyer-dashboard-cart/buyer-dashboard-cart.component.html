@@ -1,3 +1,87 @@
-<p>
-  buyer-dashboard-cart works!
-</p>
+<app-buyer-dashboard-header></app-buyer-dashboard-header>
+<app-buyer-dashboard-menu></app-buyer-dashboard-menu>
+
+<div [ngClass]="'bodye'">
+
+	<p  [ngClass]="'tabhea'">My Cart</p>
+
+	<div [ngClass]="'product'" *ngFor="let product of prodataSource">
+		<img [ngClass]="'proimg'" src="assets/images/products/pnimg1.png">
+		<div [ngClass]="'lefti'">
+			<p [ngClass]="'group'">{{product.group}}</p>
+			<p [ngClass]="'code'">Code: {{product.code}}</p>	
+		</div>
+		
+		<div [ngClass]="'rigti'">
+			<p [ngClass]="'type'">{{product.type}}</p>
+			<div [ngClass]="'rating'" *ngIf="product.rating === 1">
+				<mat-icon>star</mat-icon>
+			</div>
+			<div [ngClass]="'rating'" *ngIf="product.rating === 2">
+				<mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+			</div>
+			<div [ngClass]="'rating'" *ngIf="product.rating === 3">
+				<mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+			</div>
+			<div [ngClass]="'rating'" *ngIf="product.rating === 4">
+				<mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+			</div>
+	  	<div [ngClass]="'rating'" *ngIf="product.rating === 5">
+	  		<mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star
+	  		</mat-icon><mat-icon>star</mat-icon>
+	  	</div>				
+		</div>
+
+	  <p [ngClass]="'price_per_unit'">Unit Price:<span> {{product.price_per_unit}}</span>$</p>
+		<p [ngClass]="'units'">Number of units:<img src="assets/images/decrem.png" (click)="onDecrement()"><span>{{counter}}</span><img src="assets/images/increm.png" (click)="onIncrement()"></p>
+
+		<span [ngClass]="'linbrk'"></span>
+
+		<p [ngClass]="'total'">Total: ${{product.price_per_unit * counter}}</p>
+
+		<button [ngClass]="'remove'" mat-button >Remove Product</button>
+
+	</div>
+
+	<a href="#"> <img [ngClass]="'continue'" src="assets/images/continue.png"> </a>
+
+	<div [ngClass]="'white'">
+
+		<div [ngClass]="'left'">
+			<p [ngClass]="'head'">Shipping and Billing</p>
+			<a [ngClass]="'simp'">Edit Details</a>
+
+			<p [ngClass]="'name'">Jhon Trax</p>
+			<p [ngClass]="'addr'"><span>Address 1: </span><br>House # D574, 2nd Floor, Fifth Road, Satellite Town, Commercial Market, Rawalpindi<br><br><span>Address 2: </span><br>House # E1 WAPDA Additional Colony Shalimar Town Lahore</p>
+ 			<p [ngClass]="'tele'">+1 205 522 123</p>
+ 			<p [ngClass]="'emai'">jhontrax1@gmail.com</p>
+		</div>
+
+		<div [ngClass]="'right'">
+			
+				<p [ngClass]="'head'">Order Summary</p>
+				<p [ngClass]="'subtotal'"><span>Subtotal</span></p>
+				<p [ngClass]="'flef'">4 Items</p><p [ngClass]="'flri'">$ 58.00</p>
+				<p [ngClass]="'flef'">Shipping Fee</p><p [ngClass]="'flri'">$ 25.00</p>
+				<p [ngClass]="'flef totalo'">Total</p><p [ngClass]="'flri tota'">$ 25.00</p>
+				<p [ngClass]="'flef'"></p><p [ngClass]="'flri'"><span>T&C’s applied if any</span><br></p>
+				<p [ngClass]="'flef comm'"><span>Comments (if any):</span></p><p [ngClass]="'flri spann'">min. 40 characters</p>
+
+				<form [formGroup]="commForm" ngSubmit="onSubmit()">
+
+				<textarea placeholder="Enter Shipping related comments (if any)" matInput formControlName="comments" required></textarea>
+				<div *ngIf="submitted && commForm.controls.fname.errors" class="error">
+					<div *ngIf="commForm.controls.fname.errors">min. 40 characters</div>
+				</div>
+				
+				<button [ngClass]="'submitt'" (click)="onClickMe()" mat-button>Proceed to Payment</button>
+
+				</form>
+
+		</div>
+
+	</div>
+
+
+
+</div>

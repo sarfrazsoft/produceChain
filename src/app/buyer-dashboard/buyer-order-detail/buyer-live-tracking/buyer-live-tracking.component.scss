@@ -1,0 +1,79 @@
+.clobut {
+  float: right;
+  border: unset;
+  font-family: ProximaNova-Semibold;
+  color: #a4a4a4;
+  background: unset;
+  cursor: pointer;
+  &:focus {
+    outline: unset;
+  }
+}
+.padd {
+    padding: 24px;
+}
+.coninf  {
+    line-height: 22px;
+    margin: 22px;
+    padding-top: 11px;
+    text-align: center;
+    font-family: ProximaNova-semibold;
+    color: #354052;
+    font-size: 27px;
+    -webkit-margin-before: 7px;
+    margin-block-start: 7px;
+}
+table.simple {
+  float: left;
+  &.left {
+    padding: 0px 20px 20px 0px;
+  }
+  &.right {
+    padding: 0px 0px 20px 20px;
+  }
+  td {
+    font-family: ProximaNovaRegular;
+    padding-bottom: 15px;
+    vertical-align: top;
+    &.boll {
+      font-family: proximanova-semibold;
+      font-size: 17px;
+    }
+  }
+}
+table.end {
+	margin-top: 37px;
+	td {
+		vertical-align: top;
+    font-family: proximanova-semibold;
+    font-size: 17px;
+	}
+}
+agm-map {
+    height: 450px;
+    width: 100%;
+}
+form {
+	.update {
+	  color: #354052;
+	  font-size: 14px;
+	  font-family: proximanova-semibold;
+	  padding: 8px 12px;
+	  text-align: left;
+	  width: 400px;
+	  border-radius: 3px;
+	  border: 2px solid #dfe3e9;
+	  margin-bottom: 15px;
+	}
+	input[type="submit"] {
+		display: block;
+    background: #36af47;
+    color: #fff;
+    text-align: center;
+    font-family: proximanova-semibold;
+    padding: 10px 25px 10px 25px;
+    border-radius: 4px;
+    border: unset;
+    margin-top: 15px;
+	}
+}

@@ -59,7 +59,6 @@ const PAST_ORDERS: PastElement[] = [
   {order_no: 501, customer: 'Mydrogen', location: 'City E', amount: 97875, date_placed: '05-05-2019', date_delivered: '5 days', customer_rating: 5},
 ];
 
-
 @Component({
   selector: 'app-orders',
   templateUrl: './orders.component.html',

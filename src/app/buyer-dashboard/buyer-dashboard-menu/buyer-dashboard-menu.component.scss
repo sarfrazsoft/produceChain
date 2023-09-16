@@ -20,25 +20,39 @@
     margin: 0px auto;
     display: block;
   }
-  .ordi {    
-	 	background: url('/assets/images/ordico.png') no-repeat ;
+  .hist {    
+    background: url('/assets/images/orders_inactive.png') no-repeat ;
     padding-left: 33px;
     &.active-link, &:hover {
-    	background: url('/assets/images/orders_active.png') no-repeat ;
+      background: url('/assets/images/orders_active.png') no-repeat ;
+    }
+  }
+  .ordi {    
+	 	background: url('/assets/images/newitem_inactive.png') no-repeat ;
+    padding-left: 33px;
+    &.active-link, &:hover {
+    	background: url('/assets/images/newitem_active.png') no-repeat ;
   	}
   }
   .proi {    
-	 	background: url('/assets/images/regico.png') no-repeat ;
+	 	background: url('/assets/images/produce_inactive.png') no-repeat ;
     padding-left: 33px;
     &.active-link, &:hover {
     	background: url('/assets/images/produce_active.png') no-repeat ;
   	}
   }
-  .msco {    
-	 	background: url('/assets/images/messco.png') no-repeat ;
+  .cart {    
+    background: url('/assets/images/cart_inactive.png') no-repeat ;
     padding-left: 33px;
     &.active-link, &:hover {
-    	background: url('/assets/images/carico.png') no-repeat ;
+      background: url('/assets/images/cart_active.png') no-repeat ;
+    }
+  }
+  .msco {    
+	 	background: url('/assets/images/messages_inactive.png') no-repeat ;
+    padding-left: 33px;
+    &.active-link, &:hover {
+    	background: url('/assets/images/messages_active.png') no-repeat ;
   	}
   }
   .acci {    
@@ -49,7 +63,7 @@
   	}
   }
   .logi {    
-	 	background: url('/assets/images/turico.png') no-repeat ;
+	 	background: url('/assets/images/logout_inactive.png') no-repeat ;
     padding-left: 33px;
     &.active-link, &:hover {
     	background: url('/assets/images/logout_active.png') no-repeat ;

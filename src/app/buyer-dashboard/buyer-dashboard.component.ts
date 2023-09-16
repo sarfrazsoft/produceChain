@@ -1,24 +1,62 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl} from '@angular/forms';
-import {Observable} from 'rxjs';
-import {map, startWith} from 'rxjs/operators';
 import { MatTableDataSource } from '@angular/material';
-import { MatAutocompleteSelectedEvent } from '@angular/material';
+import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
+import { BuyerOrderDetailComponent } from './buyer-order-detail/buyer-order-detail.component';  
+import { BuyerPendingOrderDetailComponent } from './buyer-pending-order-detail/buyer-pending-order-detail.component'; 
+import { BuyerPastOrderDetailComponent } from './buyer-past-order-detail/buyer-past-order-detail.component'; 
 
-export interface ProductElement {
-  group: string;
-  type: string;
-  code: number;
-  rating: number;
-  price_per_unit: number;
-  image: string;
+export interface CurrentElement {
+  order_no: number;
+  customer: string;
+  location: string;
+  amount: number;
+  date_placed: string;
+  est_delivery: string;
+  status: string;
 }
 
-const PRODUCTS: ProductElement[] = [
-	{group: 'Pineapple', type: 'sweet/tangy', code: 213, rating: 1, price_per_unit: 5, image: 'assets/images/products/pnimg1.png'},
-	{group: 'Pineapple', type: 'sweet/tangy', code: 314, rating: 3, price_per_unit: 6, image: 'assets/images/products/pnimg1.png'},
-	{group: 'Pineapple', type: 'sweet/tangy', code: 415, rating: 5, price_per_unit: 7, image: 'assets/images/products/pnimg1.png'},
-	{group: 'Pineapple', type: 'sweet/tangy', code: 516, rating: 2, price_per_unit: 8, image: 'assets/images/products/pnimg1.png'},
+const CURRENT_ORDERS: CurrentElement[] = [
+  {order_no: 101, customer: 'Pydrogen', location: 'City A', amount: 57875, date_placed: '01-05-2019', est_delivery: '5 days', status: 'Preparing'},
+  {order_no: 201, customer: 'Jydrogen', location: 'City B', amount: 67875, date_placed: '02-05-2019', est_delivery: '6 days', status: 'Shipping'},
+  {order_no: 301, customer: 'Kydrogen', location: 'City C', amount: 77875, date_placed: '03-05-2019', est_delivery: '7 days', status: 'Shipping'},
+  {order_no: 401, customer: 'Lydrogen', location: 'City D', amount: 87875, date_placed: '04-05-2019', est_delivery: '8 days', status: 'Shipping'},
+  {order_no: 501, customer: 'Mydrogen', location: 'City E', amount: 97875, date_placed: '05-05-2019', est_delivery: '5 days', status: 'Preparing'},
+];
+
+export interface PendingElement {
+  order_no: number;
+  customer: string;
+  location: string;
+  amount: number;
+  date_placed: string;
+  est_delivery: string;
+  status: string;
+}
+
+const PENDING_ORDERS: PendingElement[] = [
+  {order_no: 101, customer: 'Pydrogen', location: 'City A', amount: 57875, date_placed: '01-05-2019', est_delivery: '5 days', status: 'waiting on delivery info.'},
+  {order_no: 201, customer: 'Jydrogen', location: 'City B', amount: 67875, date_placed: '02-05-2019', est_delivery: '6 days', status: 'waiting customer approval'},
+  {order_no: 301, customer: 'Kydrogen', location: 'City C', amount: 77875, date_placed: '03-05-2019', est_delivery: '7 days', status: 'waiting shipping info.'},
+  {order_no: 401, customer: 'Lydrogen', location: 'City D', amount: 87875, date_placed: '04-05-2019', est_delivery: '8 days', status: 'Shipping'},
+  {order_no: 501, customer: 'Mydrogen', location: 'City E', amount: 97875, date_placed: '05-05-2019', est_delivery: '5 days', status: 'Pending'},
+];
+
+export interface PastElement {
+  order_no: number;
+  customer: string;
+  location: string;
+  amount: number;
+  date_placed: string;
+  date_delivered: string;
+  customer_rating: number;
+}
+
+const PAST_ORDERS: PastElement[] = [
+  {order_no: 101, customer: 'Pydrogen', location: 'City A', amount: 57875, date_placed: '01-05-2019', date_delivered: '5 days', customer_rating: 1},
+  {order_no: 201, customer: 'Jydrogen', location: 'City B', amount: 67875, date_placed: '02-05-2019', date_delivered: '6 days', customer_rating: 2},
+  {order_no: 301, customer: 'Kydrogen', location: 'City C', amount: 77875, date_placed: '03-05-2019', date_delivered: '7 days', customer_rating: 3},
+  {order_no: 401, customer: 'Lydrogen', location: 'City D', amount: 87875, date_placed: '04-05-2019', date_delivered: '8 days', customer_rating: 4},
+  {order_no: 501, customer: 'Mydrogen', location: 'City E', amount: 97875, date_placed: '05-05-2019', date_delivered: '5 days', customer_rating: 5},
 ];
 
 @Component({
@@ -28,52 +66,53 @@ const PRODUCTS: ProductElement[] = [
 })
 export class BuyerDashboardComponent implements OnInit {
 
-	isHidden : boolean = false;
-	isSelected : boolean = false;
-	counter: number = 1;
+title: string = 'My first AGM project';
+  lat: number = 49.678418;
+  lng: number = 9.809007;  
+  lat2: number = 52.678418;
+  lng2: number = 8.809007;
 
-	myControl = new FormControl();
-  options: string[] = ['Apple', 'Pineapple', 'Grapes', 'Mangoes', 'Oranges'];
-	filteredOptions: Observable<string[]>;
+  currDisplayedColumns: string[] = ['order_no', 'customer', 'location', 'amount', 'date_placed', 'est_delivery', 'status'];
+  currDataSource = new  MatTableDataSource(CURRENT_ORDERS);
 
-	prodataSource = PRODUCTS;
+  applyCurrFilter(filterValue: string) {
+    this.currDataSource.filter = filterValue.trim().toLowerCase();
+  }
+  
+  pendDisplayedColumns: string[] = ['order_no', 'customer', 'location', 'amount', 'date_placed', 'est_delivery', 'status'];
+  pendDataSource = new  MatTableDataSource(PENDING_ORDERS);
 
-	onSrchClick() {
-		this.isHidden = true;
-
-	}
-
-  constructor() {
-  	// console.log(Object.keys(PRODUCTS).length);
+  applyPendFilter(filterValue: string) {
+    this.pendDataSource.filter = filterValue.trim().toLowerCase();
   }
 
-	onIncrement(): void {
-		this.counter += 1;
-	}
+  pastDisplayedColumns: string[] = ['order_no', 'customer', 'location', 'amount', 'date_placed', 'date_delivered', 'customer_rating'];
+  pastDataSource = new  MatTableDataSource(PAST_ORDERS);
 
-	onDecrement(): void {
-		if (this.counter > 1)
-		this.counter -= 1;
-	}
+  applyPastFilter(filterValue: string) {
+    this.pastDataSource.filter = filterValue.trim().toLowerCase();
+  }
 
+  constructor(public dialog: MatDialog) {}
+
+  onClickCurrent() {
+    let dialogRef = this.dialog.open(BuyerOrderDetailComponent, {
+        width: '60vw',
+    });
+  }
+
+  onClickPendind() {
+    let dialogRef = this.dialog.open(BuyerPendingOrderDetailComponent, {
+        width: '60vw',
+    });
+  }  
+
+  onClickPast() {
+    let dialogRef = this.dialog.open(BuyerPastOrderDetailComponent, {
+        width: '60vw',
+    });
+  }
   ngOnInit() {
-    this.filteredOptions = this.myControl.valueChanges
-      .pipe(
-        startWith(''),
-        map(value => this._filter(value))
-      );
   }
-
-  private _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-
-    return this.options.filter(option => option.toLowerCase().includes(filterValue));
-	}
-
-	onSelectionChanged(event: MatAutocompleteSelectedEvent) {
-		this.isSelected = true;
-		console.log(this.isSelected);
-	  console.log(event.option.value);
-	}
 
 }

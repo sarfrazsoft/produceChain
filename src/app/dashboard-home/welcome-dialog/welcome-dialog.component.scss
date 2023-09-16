@@ -20,6 +20,7 @@ p {
 	text-align: center;
 	font-family: ProximaNovaRegular;
 	color: #354052;
+  font-size: 17px;
 	span {
     position: relative;
     bottom: 15px;
@@ -29,6 +30,7 @@ p {
   }
   &.thank {
   	font-size: 22px;
+    margin: 22px;
   }
   &.topi {
   	margin-top: 40px;

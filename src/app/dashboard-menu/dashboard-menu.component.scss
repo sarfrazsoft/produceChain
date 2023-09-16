@@ -6,7 +6,7 @@
   width: 13%;
   float: left;
 	BACKGROUND-COLOR: #007900;
-  height: 100%;
+  
   margin-top: -3px;
   font-family: ProximaNovaRegular;
   .homi {    
@@ -21,7 +21,7 @@
     display: block;
   }
   .ordi {    
-	 	background: url('/assets/images/ordico.png') no-repeat ;
+	 	background: url('/assets/images/orders_inactive.png') no-repeat ;
     padding-left: 33px;
     &.active-link, &:hover {
     	background: url('/assets/images/orders_active.png') no-repeat ;
@@ -49,7 +49,7 @@
   	}
   }
   .logi {    
-	 	background: url('/assets/images/turico.png') no-repeat ;
+	 	background: url('/assets/images/logout_inactive.png') no-repeat ;
     padding-left: 33px;
     &.active-link, &:hover {
     	background: url('/assets/images/logout_active.png') no-repeat ;

@@ -16,10 +16,11 @@ import { ProduceComponent } from './dashboard-home/produce/produce.component';
 import { MessagesComponent } from './dashboard-home/messages/messages.component';
 import { PasswordRecoveryComponent } from './signup/password-recovery/password-recovery.component';
 import { BuyerDashboardComponent } from './buyer-dashboard/buyer-dashboard.component';
-import { BuyerDashboardRegisterComponent } from './buyer-dashboard/buyer-dashboard-register/buyer-dashboard-register.component';
-import { BuyerDashboardOrdersComponent } from './buyer-dashboard/buyer-dashboard-orders/buyer-dashboard-orders.component';
 import { BuyerDashboardCartComponent } from './buyer-dashboard/buyer-dashboard-cart/buyer-dashboard-cart.component';
 import { BuyerDashboardAccountComponent } from './buyer-dashboard/buyer-dashboard-account/buyer-dashboard-account.component';
+import { BuyerDashboardNewOrderComponent } from './buyer-dashboard/buyer-dashboard-new-order/buyer-dashboard-new-order.component';
+import { BuyerDashboardMessagesComponent } from './buyer-dashboard/buyer-dashboard-messages/buyer-dashboard-messages.component';
+import { BuyerDashboardOrderHistoryComponent } from './buyer-dashboard/buyer-dashboard-order-history/buyer-dashboard-order-history.component';
 
 const routes: Routes = [
 	{ path: '', component: HomeComponent },
@@ -37,10 +38,11 @@ const routes: Routes = [
 	{ path: 'dashboard-home/produce', component: ProduceComponent },
 	{ path: 'dashboard-home/messages', component: MessagesComponent },
 	{ path: 'buyer-dashboard', component: BuyerDashboardComponent },
-	{ path: 'buyer-dashboard-register', component: BuyerDashboardRegisterComponent },
-	{ path: 'buyer-dashboard-orders', component: BuyerDashboardOrdersComponent },
 	{ path: 'buyer-dashboard-cart', component: BuyerDashboardCartComponent },
 	{ path: 'buyer-dashboard-account', component: BuyerDashboardAccountComponent },
+	{ path: 'buyer-dashboard-new-order', component: BuyerDashboardNewOrderComponent },
+	{ path: 'buyer-dashboard-messages', component: BuyerDashboardMessagesComponent },
+	{ path: 'buyer-dashboard-order-history', component: BuyerDashboardOrderHistoryComponent },
 ];
 
 @NgModule({

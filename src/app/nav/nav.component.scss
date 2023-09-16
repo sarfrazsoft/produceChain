@@ -17,7 +17,7 @@ header {
 }
 /*Strip the ul of padding and list styling*/
 ul {
-    margin-top: 20px !important;
+    margin-top: 15px !important;
     justify-self: right;
     list-style-type: none;
     margin: 0; padding: 0;
@@ -151,5 +151,5 @@ input[type=checkbox]:checked ~ #menu{
 .navi{
         display: grid;
         grid-template-columns: 23% auto;
-        padding: 1.3em 1.3em .7em 1.3em;
+        padding: 1.3em 1.3em 8px 1.3em;
 }

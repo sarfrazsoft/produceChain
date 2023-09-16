@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  imageSources: (string)[] = [ "assets/images/slide1.png", "assets/images/slide2.png", "assets/images/slide3.png"];
+  imageSources: (string)[] = [ "assets/images/banner-1.png", "assets/images/banner-2.png", "assets/images/banner-3.png"];
   height: string = '600px';
 /*
   height: string = '400px';

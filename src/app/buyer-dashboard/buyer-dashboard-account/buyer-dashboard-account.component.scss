@@ -1,0 +1,93 @@
+::ng-deep .mat-form-field-appearance-outline {
+// .mat-form-field-appearance-outline {
+  .mat-form-field-outline-gap, .mat-form-field-outline-end, .mat-form-field-outline-start {
+    background-color: #fff;
+  }
+}
+// ::ng-deep .mat-form-field-infix {
+.mat-form-field-infix {
+  border-top: 0;
+}
+// ::ng-deep .mat-form-field {
+.mat-form-field {
+    font-size: 14px;
+    height: 100px;
+    width: 44%;
+}
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-label {
+.mat-form-field-appearance-outline .mat-form-field-label {
+    top: 2.3em;
+    font-family: ProximaNova-SemiBold;
+    color: #354052;
+}
+//::ng-deep .mat-hint {
+.mat-hint {
+    font-family: ProximaNova-SemiBold;
+    font-size: 13px;
+}
+.firstg {
+    width: 55%;
+    margin: 0px auto;
+    margin-top: 2.5%;
+}
+.mtop {
+  margin-top: 2% !important;
+  width: 22% !important;
+}
+.paca {
+  margin-right: 11%;
+  float: left;
+}
+.acctit {
+  margin-right: 11%;
+}
+.abopho {
+  position: relative;
+  left: -30px;
+}
+img {
+  width: auto;
+  &.propho {
+    width: 150px;
+  }
+  &.above {
+    width: 150px;
+    position: relative;
+    left: -150px;
+    top: 0px;
+    background: #000;
+    opacity: .4;
+    border-radius: 50%;
+  }
+}
+.none {
+    display: none;
+}
+.bodye {
+    background-size: cover;
+    position: absolute;
+    top: 75px;
+    right: 0;
+  	background-color: #eff3f6;
+    padding: 3%;
+    margin-top: -3px;
+    float: left;
+    width: 75%;
+    height: 1200px;
+    .tabhea {
+	    color: #354052;
+	    font-size: 20px;
+	    font-family: ProximaNova-SemiBold;
+  	  float: left;
+      width: 45%;
+      margin-top: 0;
+	}
+  .labbel {
+    color: #7f8fa4;
+    font-family: ProximaNova-SemiBold;
+    font-size: 14px;
+  }
+}
+img {
+  width: auto;
+}

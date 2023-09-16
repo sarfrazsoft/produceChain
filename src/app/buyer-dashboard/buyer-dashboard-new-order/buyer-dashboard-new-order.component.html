@@ -1,0 +1,82 @@
+<app-buyer-dashboard-header></app-buyer-dashboard-header>
+<app-buyer-dashboard-menu></app-buyer-dashboard-menu>
+
+<div [ngClass]="'bodye'">
+
+	<p  [ngClass]="'tabhea'">Search Products</p>
+
+	<form [ngClass]="'steptwo'">
+
+		<select>
+	  	<option selected disabled>GROUP</option>
+	    <option value="volvo">Apple</option>
+	    <option value="saab">Banana</option>
+	    <option value="mercedes">Pear</option>
+	    <option value="audi">New</option>
+	  </select>
+		<select>
+	  	<option selected disabled>SIZE</option>
+	    <option value="volvo">Apple</option>
+	    <option value="saab">Banana</option>
+	    <option value="mercedes">Pear</option>
+	    <option value="audi">New</option>
+	  </select>
+		<select>
+	  	<option selected disabled>COLOR</option>
+	    <option value="volvo">Apple</option>
+	    <option value="saab">Banana</option>
+	    <option value="mercedes">Pear</option>
+	    <option value="audi">Group</option>
+	  </select>
+		<select>
+	  	<option selected disabled>LOCATION</option>
+	    <option value="volvo">Apple</option>
+	    <option value="saab">Banana</option>
+	    <option value="mercedes">Pear</option>
+	    <option value="audi">New</option>
+	  </select>
+
+	  <button [ngClass]="'submitt'" (click)="onClickMe()" mat-button>Search</button>
+
+	</form>
+
+	<div [ngClass]="'product'" *ngFor="let product of prodataSource">
+		<img [ngClass]="'proimg'" src="assets/images/products/pnimg1.png">
+		<div [ngClass]="'lefti'">
+			<p [ngClass]="'group'">{{product.group}}</p>
+			<p [ngClass]="'code'">Code: {{product.code}}</p>	
+		</div>
+		
+		<div [ngClass]="'rigti'">
+			<p [ngClass]="'type'">{{product.type}}</p>
+			<div [ngClass]="'rating'" *ngIf="product.rating === 1">
+				<mat-icon>star</mat-icon>
+			</div>
+			<div [ngClass]="'rating'" *ngIf="product.rating === 2">
+				<mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+			</div>
+			<div [ngClass]="'rating'" *ngIf="product.rating === 3">
+				<mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+			</div>
+			<div [ngClass]="'rating'" *ngIf="product.rating === 4">
+				<mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+			</div>
+	  	<div [ngClass]="'rating'" *ngIf="product.rating === 5">
+	  		<mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star
+	  		</mat-icon><mat-icon>star</mat-icon>
+	  	</div>				
+		</div>
+
+	  <p [ngClass]="'price_per_unit'">Unit Price:<span> {{product.price_per_unit}}</span>$</p>
+		<p [ngClass]="'units'">Number of units:<img src="assets/images/decrem.png" (click)="onDecrement()"><span>{{counter}}</span><img src="assets/images/increm.png" (click)="onIncrement()"></p>
+
+		<span [ngClass]="'linbrk'"></span>
+
+		<p [ngClass]="'total'">Total: ${{product.price_per_unit * counter}}</p>
+
+		<button [ngClass]="'info'" mat-button >Product Info</button>
+		<button [ngClass]="'cart'" mat-button >Add to Cart</button>
+
+	</div>
+	
+</div>

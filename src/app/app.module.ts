@@ -44,10 +44,15 @@ import { PasswordRecoveryComponent } from './signup/password-recovery/password-r
 import { BuyerDashboardComponent } from './buyer-dashboard/buyer-dashboard.component';
 import { BuyerDashboardHeaderComponent } from './buyer-dashboard/buyer-dashboard-header/buyer-dashboard-header.component';
 import { BuyerDashboardMenuComponent } from './buyer-dashboard/buyer-dashboard-menu/buyer-dashboard-menu.component';
-import { BuyerDashboardRegisterComponent } from './buyer-dashboard/buyer-dashboard-register/buyer-dashboard-register.component';
-import { BuyerDashboardOrdersComponent } from './buyer-dashboard/buyer-dashboard-orders/buyer-dashboard-orders.component';
 import { BuyerDashboardCartComponent } from './buyer-dashboard/buyer-dashboard-cart/buyer-dashboard-cart.component';
 import { BuyerDashboardAccountComponent } from './buyer-dashboard/buyer-dashboard-account/buyer-dashboard-account.component';
+import { BuyerDashboardNewOrderComponent } from './buyer-dashboard/buyer-dashboard-new-order/buyer-dashboard-new-order.component';
+import { BuyerOrderDetailComponent } from './buyer-dashboard/buyer-order-detail/buyer-order-detail.component';
+import { BuyerLiveTrackingComponent } from './buyer-dashboard/buyer-order-detail/buyer-live-tracking/buyer-live-tracking.component';
+import { BuyerPastOrderDetailComponent } from './buyer-dashboard/buyer-past-order-detail/buyer-past-order-detail.component';
+import { BuyerPendingOrderDetailComponent } from './buyer-dashboard/buyer-pending-order-detail/buyer-pending-order-detail.component';
+import { BuyerDashboardMessagesComponent } from './buyer-dashboard/buyer-dashboard-messages/buyer-dashboard-messages.component';
+import { BuyerDashboardOrderHistoryComponent } from './buyer-dashboard/buyer-dashboard-order-history/buyer-dashboard-order-history.component';
 
 @NgModule({
   
@@ -80,10 +85,15 @@ import { BuyerDashboardAccountComponent } from './buyer-dashboard/buyer-dashboar
     BuyerDashboardComponent,
     BuyerDashboardHeaderComponent,
     BuyerDashboardMenuComponent,
-    BuyerDashboardRegisterComponent,
-    BuyerDashboardOrdersComponent,
     BuyerDashboardCartComponent,
     BuyerDashboardAccountComponent,
+    BuyerDashboardNewOrderComponent,
+    BuyerOrderDetailComponent,
+    BuyerLiveTrackingComponent,
+    BuyerPastOrderDetailComponent,
+    BuyerPendingOrderDetailComponent,
+    BuyerDashboardMessagesComponent,
+    BuyerDashboardOrderHistoryComponent,
     
   ],
   imports: [
@@ -114,6 +124,10 @@ import { BuyerDashboardAccountComponent } from './buyer-dashboard/buyer-dashboar
   ],
   providers: [],
   bootstrap: [AppComponent],
-  entryComponents: [ WelcomeDialogComponent, NewListingComponent, OrderDetailComponent, PendingOrderDetailComponent, PastOrderDetailComponent, LiveTrackingComponent ]
+  entryComponents: [ WelcomeDialogComponent, NewListingComponent, OrderDetailComponent, PendingOrderDetailComponent, PastOrderDetailComponent, LiveTrackingComponent,
+    BuyerOrderDetailComponent,
+    BuyerLiveTrackingComponent,
+    BuyerPastOrderDetailComponent,
+    BuyerPendingOrderDetailComponent, ]
 })
 export class AppModule { }

@@ -3,6 +3,11 @@
 
 <div [ngClass]="'bodye'">
 
+	<mat-form-field>
+  	<input matInput (keyup)="applyProduceFilter($event.target.value)" placeholder="Search Produce">
+  	<mat-icon matSuffix [ngClass]="'ficon'">search</mat-icon>
+	</mat-form-field>
+
 	<div  [ngClass]="'fulwidt firstful'">
 
 		<p  [ngClass]="'tabhea'">Active Produce<a href="">View All</a></p> 

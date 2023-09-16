@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material';
+import { MatTableDataSource } from '@angular/material';
+import { MatDialog, MatDialogConfig, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { NewListingComponent } from './new-listing/new-listing.component';
 
 export interface ProduceElement {
@@ -36,7 +37,11 @@ const PRODUCE: ProduceElement[] = [
 export class ProduceComponent implements OnInit {
 
   prodisplayedColumns: string[] = ['group', 'name', 'size', 'color', 'details', 'description', 'inventory', 'price_per_unit', 'label_details', 'growth_location', 'est_time_to_ship', 'shipping_details', 'notes', 'status'];
-  prodataSource = PRODUCE;
+  prodataSource = new MatTableDataSource(PRODUCE);
+
+  applyProduceFilter(filterValue: string) {
+    this.prodataSource.filter = filterValue.trim().toLowerCase();
+  }
 
   constructor(public dialog: MatDialog) {}
 
