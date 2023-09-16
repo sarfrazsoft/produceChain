@@ -1,0 +1,173 @@
+
+<button mat-dialog-close [ngClass]="'clobut'">X</button>
+
+<p [ngClass]="'coninf'">Order No. 3425</p>
+
+<mat-dialog-content class="mat-typography">
+
+<div [ngClass]="'padd'">
+
+	<table  [ngClass]="'simple left'" style="width:50%">
+	  <tr>
+	    <td [ngClass]="'boll'">Order Place:</td>
+	    <td>03/25/19</td>
+	  </tr>
+	  <tr>
+	    <td [ngClass]="'boll'">Customer Name:</td> 
+	    <td>Wegmans</td>
+	  </tr>  
+	  <tr>
+	    <td [ngClass]="'boll'">Customer Add:</td>
+	    <td>243 Lincoln Ave<br>Philadelphia<br>PA 19460</td>
+	  </tr>
+	</table>
+
+	<table  [ngClass]="'simple right'" style="width:50%">
+	  <tr>
+	    <td [ngClass]="'boll'">Delivered:</td> 
+	    <td>04/30/19</td>
+	  </tr>  
+	  <tr>
+	    <td [ngClass]="'boll'">Contact Name:</td> 
+	    <td>Bob Willis</td>
+	  </tr>
+	  <tr>
+	    <td [ngClass]="'boll'">Contact Number:</td> 
+	    <td>301-981-2032</td>
+	  </tr>
+	</table>
+
+	<span [ngClass]="'linbrk'"></span>
+
+	<div [ngClass]="'bodye'">
+
+		<div [ngClass]="'ffulwidt'">
+
+			<p [ngClass]="'tabhea'">Order Details</p> 
+
+			<table mat-table [dataSource]="currDataSource" [ngClass]="'complex'" class="mat-elevation-z8">
+
+			  <ng-container matColumnDef="product">
+			    <th mat-header-cell *matHeaderCellDef> product </th>
+			    <td mat-cell *matCellDef="let element"> {{element.product}} </td>
+			  </ng-container>
+
+			  <!-- Name Column -->
+			  <ng-container matColumnDef="size">
+			    <th mat-header-cell *matHeaderCellDef> size </th>
+			    <td mat-cell *matCellDef="let element"> {{element.size}} </td>
+			  </ng-container>
+
+			  <ng-container matColumnDef="amount">
+			    <th mat-header-cell *matHeaderCellDef> amount </th>
+			    <td mat-cell *matCellDef="let element"> {{element.amount}} Units</td>
+			  </ng-container>
+
+			  <ng-container matColumnDef="decription">
+			    <th mat-header-cell *matHeaderCellDef> decription </th>
+			    <td mat-cell *matCellDef="let element"> {{element.decription}} </td>
+			  </ng-container>
+
+			  <ng-container matColumnDef="price_per_unit">
+			    <th mat-header-cell *matHeaderCellDef> price/unit </th>
+			    <td mat-cell *matCellDef="let element"> {{element.price_per_unit}} </td>
+			  </ng-container>
+
+			  <ng-container matColumnDef="label_details">
+			    <th mat-header-cell *matHeaderCellDef> label details </th>
+			    <td mat-cell *matCellDef="let element"> {{element.label_details}} </td>
+			  </ng-container>
+
+			  <ng-container matColumnDef="growth_location">
+			    <th mat-header-cell *matHeaderCellDef> growth location </th>
+			    <td mat-cell *matCellDef="let element"> {{element.growth_location}} </td>
+			  </ng-container>
+
+			  <tr mat-header-row *matHeaderRowDef="currDisplayedColumns"></tr>
+			  <tr mat-row *matRowDef="let row; columns: currDisplayedColumns;"></tr>
+			</table>
+
+		</div>
+
+	</div>
+
+	<span [ngClass]="'linbrk mtop'"></span>
+
+	<p [ngClass]="'tabhea'">Order Status</p> 
+
+	<div [ngClass]="'vertic'">
+		<img src="assets/images/linklist.png" [ngClass]="'first'" >
+		<svg height="15" width="60">
+		<line x1="0" y1="0" x2="60" y2="0" style="stroke:#56d841;stroke-width:6" />
+		Sorry, your browser does not support inline SVG.
+		</svg>
+		<p> Order<br>Received<br>3/25 </p>
+	</div>
+	<div [ngClass]="'vertic'">
+		<img src="assets/images/linklist.png" >
+		<svg height="15" width="60">
+		<line x1="0" y1="0" x2="60" y2="0" style="stroke:#56d841;stroke-width:6" />
+		Sorry, your browser does not support inline SVG.
+		</svg>
+		<p [ngClass]="'next'"> Order<br>Approved<br>3/25 </p>
+	</div>
+		<div [ngClass]="'vertic'">
+		<img src="assets/images/linklist.png" >
+		<svg height="15" width="60">
+		<line x1="0" y1="0" x2="60" y2="0" style="stroke:#56d841;stroke-width:6" />
+		Sorry, your browser does not support inline SVG.
+		</svg>
+		<p [ngClass]="'next'"> Order<br>Packaged<br>3/25 </p>
+	</div>
+	<div [ngClass]="'vertic'">
+		<img src="assets/images/linklist.png" >
+		<svg height="15" width="60">
+		<line x1="0" y1="0" x2="60" y2="0" style="stroke:#56d841;stroke-width:6" />
+		Sorry, your browser does not support inline SVG.
+		</svg>
+		<p [ngClass]="'next'"> Order<br>deliverd to<br>shipping port<br>3/26 </p>
+	</div>
+	<div [ngClass]="'vertic'">
+		<img src="assets/images/linklist.png" >
+		<svg height="15" width="60">
+		<line x1="0" y1="0" x2="60" y2="0" style="stroke:#56d841;stroke-width:6" />
+		Sorry, your browser does not support inline SVG.
+		</svg>
+		<p [ngClass]="'next'"> Order<br>departed<br>port </p>
+	</div>
+	<div [ngClass]="'vertic'">
+		<img src="assets/images/linklist.png" >
+		<svg height="15" width="60">
+		<line x1="0" y1="0" x2="60" y2="0" style="stroke:#56d841;stroke-width:6" />
+		Sorry, your browser does not support inline SVG.
+		</svg>
+		<p [ngClass]="'next'"> Order<br>arrival at<br>destination<br>port </p>
+	</div>
+	<div [ngClass]="'vertic leftic'">
+		<img src="assets/images/linklist.png" >
+		<p [ngClass]="''"> Order<br>Delivered </p>
+	</div>
+
+	<span [ngClass]="'linbrk mtop'"></span>
+
+
+	<p [ngClass]="'tabhea'">Order Reviews</p> 
+
+	<a [ngClass]="'signed upper'"><mat-icon matPrefix [ngClass]="'matico'">info</mat-icon> Order delivered on 3/1 at 12:13pm signed for by Sean Smiith</a>
+
+	<p [ngClass]="'prohea'">Documentation</p>
+	<p [ngClass]="'centrr'"> See attached documents for order information </p>
+
+	<a [ngClass]="'greenn'" href=""><mat-icon matPrefix>attach_file</mat-icon> Shipping Receival Documents</a>
+
+	<a [ngClass]="'greenn'" href=""><mat-icon matPrefix>attach_file</mat-icon> Customer Feedback</a>
+
+	<span [ngClass]="'linbrk mtop'"></span>
+
+	<a [ngClass]="'signed bottom'"><mat-icon matPrefix [ngClass]="'matico'">email</mat-icon> Message Customer Support</a>
+	<a [ngClass]="'signed second'"><mat-icon matPrefix [ngClass]="'matico'">send</mat-icon> Export Order Details</a>
+
+	<p [ngClass]="'probot'">Order Processed by Joe Digorney</p>
+
+</div>
+</mat-dialog-content>

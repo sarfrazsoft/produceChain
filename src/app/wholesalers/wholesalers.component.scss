@@ -1,0 +1,26 @@
+.myclas { 
+	width: 555px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.bibra {
+	background-image: url(/assets/images/curl1.png);
+    background-repeat: no-repeat;
+    background-size: 7%;
+}
+.botrig {
+	background-image: url(/assets/images/curl2.png);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 24%;
+}
+.marbott {
+    padding-bottom: 34px;
+    display: inline-block;
+}
+
+@media (max-width: 760px) {
+    .myclas {
+        width: 356px;
+    }
+}

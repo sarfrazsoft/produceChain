@@ -1,0 +1,203 @@
+.mat-dialog-content {
+    float: left;
+}
+.clobut {
+  float: right;
+  border: unset;
+  font-family: ProximaNova-Semibold;
+  color: #a4a4a4;
+  background: unset;
+  cursor: pointer;
+  &:focus {
+    outline: unset;
+  }
+}
+img {
+    width: auto;
+}
+p {
+	line-height: 22px;
+	text-align: center;
+	font-family: ProximaNovaRegular;
+	color: #354052;
+	span {
+    position: relative;
+    bottom: 15px;
+    font-size: 30px;
+    font-family: ProximaNova-semibold;
+    text-align: center;
+  }
+  &.thank {
+  	font-size: 22px;
+  }
+  &.topi {
+  	margin-top: 40px;
+  }
+	&.coninf {
+		font-size: 22px;
+    margin: 22px;
+	}
+}
+
+.outer {
+	padding: 0px 90px 15px 90px;
+}
+
+.submitt {
+		width: 120px;
+    clear: both;
+    background: url(/assets/images/rigaro.png) no-repeat scroll 77px 13px;
+		color: #fff;
+		background-color: #36ae46;
+		margin: 0px auto;
+    display: block;
+    border-radius: 3px;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.previous {
+		width: 120px;
+    clear: both;
+    background: url(/assets/images/prigaro.png) no-repeat scroll 22px 12px;
+		color: #fff;
+		background-color: #36ae46;
+		margin: 0px auto;
+    border-radius: 3px;
+    text-align: center;
+    padding-left: 25px;
+    margin-left: 165px;
+    margin-right: 30px;
+}
+
+.next {
+		width: 120px;
+    clear: both;
+    background: url(/assets/images/rigaro.png) no-repeat scroll 77px 13px;
+		color: #fff;
+		background-color: #36ae46;
+		margin: 0px auto;
+    border-radius: 3px;
+    text-align: center;
+    padding-left: 0px;
+}
+
+// ::ng-deep .mat-dialog-container, ::ng-deep .mat-horizontal-content-container {
+.mat-dialog-container, .mat-horizontal-content-container {
+    padding: 0px !important;
+    overflow: hidden;
+}
+
+::ng-deep .mat-step-header, ::ng-deep .mat-stepper-horizontal-line {
+// .mat-step-header {
+	display: none !important;
+}
+// ::ng-deep .mat-form-field-infix {
+.mat-form-field-infix {
+	border-top: 0;
+  padding: 11px !important;
+}
+// ::ng-deep .mat-form-field {
+.mat-form-field {
+    font-size: 14px;
+}
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-label {
+.mat-form-field-appearance-outline .mat-form-field-label {
+    top: 1.99em;
+}
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-end {
+.mat-form-field-appearance-outline .mat-form-field-outline-end {
+  border: 1px solid #36ae46 !important;
+  border-left: unset !important;
+}
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-start {
+.mat-form-field-appearance-outline .mat-form-field-outline-start {
+  border: 1px solid #36ae46 !important;
+  border-right: unset !important;
+}
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-outline-gap {
+.mat-form-field-appearance-outline .mat-form-field-outline-gap {
+  border: 1px solid #36ae46 !important;
+  border-left: unset !important;
+  border-right: unset !important;
+}
+
+.fullwi {
+	padding: 25px;
+  background: #f0f3f8;
+  width: 92%;
+  float: left;
+  margin-top: 17px;
+}
+
+.fullwid {
+	padding: 25px 0px;
+  background: #f0f3f8;
+  width: 100%;
+  float: left;
+  margin-top: 17px;
+}
+
+.mat-form-field-wrapper {
+    padding-bottom: .75em !important;
+}
+
+form {
+	.fields {
+		// padding: 15px 30px 5px 50px;
+	}
+	.field {
+		padding: 15px 100px 5px 100px;
+		::ng-deep .mat-form-field {
+	    width: 88%;
+		}
+	}
+	.busnam {
+    display: block;
+    width: 40%;
+	}
+	.three {
+    width: 30%;
+    margin-right: 3%;
+	}
+	.four {
+    width: 21.77%;
+    margin-right: 3%;
+	}
+	.left {
+    width: 75%;
+    float: left;
+	}
+	.leftt {
+    width: 62%;
+    float: left;
+    margin-top: 5%;
+	}
+	.rightt {
+    width: 22%;
+    float: left;
+    border-left: 2px dashed #efefef;
+    padding-left: 33px;
+    margin-top: 0%;
+    img {
+	    padding: 0% 0%;
+		}
+	}
+	.right {
+    width: 16%;
+    float: right;
+    border-left: 2px dashed #efefef;
+    padding-left: 33px;
+    margin-top: 10%;
+    img {
+	    padding: 33% 0%;
+		}
+	}
+	.none {
+		display: none;
+	}
+	.busadd{
+    width: 63%;
+    margin-right: 3%;
+	}
+}

@@ -1,0 +1,101 @@
+<app-dashboard-header></app-dashboard-header>
+<app-dashboard-menu></app-dashboard-menu>
+
+<div [ngClass]="'bodye'">
+	<p [ngClass]="'labbel'">Member Since: April 3, 2019</p>
+	<p [ngClass]="'tabhea'">Account Settings</p> 
+	<p [ngClass]="'labbel'">Profile Photo</p>
+	<form [ngClass]="''" [formGroup]="contForm">
+	  <label [ngClass]="'abopho'">
+      <input [ngClass]="'none'" type="file" formControlName="propho" name="image" required/>
+      <img [ngClass]="'propho'" src="assets/images/members/propho.png">
+      <img [ngClass]="'above'" src="assets/images/above_image.png">
+    </label>
+    <div [ngClass]="'firstg'">
+    <mat-form-field [ngClass]="'acctit'" appearance="outline">
+      <mat-label>Account Title</mat-label>
+      <input matInput formControlName="acc_tit" required>
+      <mat-hint>This is required field</mat-hint>
+    </mat-form-field>
+    <mat-form-field [ngClass]="'userid'" appearance="outline">
+      <mat-label>User ID</mat-label>
+      <input matInput formControlName="user_id" required>
+      <mat-hint>This is your unique user id that you can use to login.</mat-hint>
+    </mat-form-field>
+    <mat-form-field [ngClass]="'acctit'" appearance="outline">
+      <mat-label>Business Address</mat-label>
+      <textarea matInput formControlName="bus_add" required></textarea>
+      <mat-hint>This is required field</mat-hint>
+    </mat-form-field>
+    <mat-form-field [ngClass]="'contno'" appearance="outline">
+      <mat-label>Contact No.</mat-label>
+      <input matInput formControlName="cont_no" required>
+      <mat-hint>Enter your number in this format xxx-xxx-xxxx. This is required field</mat-hint>
+    </mat-form-field>      
+    </div>
+    <p [ngClass]="'tabhea mtop'">Primary Account Contact</p> 
+    <div [ngClass]="'firstg'">
+    <mat-form-field [ngClass]="'acctit'" appearance="outline">
+      <mat-label>Full Name</mat-label>
+      <input matInput formControlName="acc_tit" required>
+      <mat-hint>This is required field</mat-hint>
+    </mat-form-field>
+    <mat-form-field [ngClass]="'contno'" appearance="outline">
+      <mat-label>Contact No.</mat-label>
+      <input matInput formControlName="cont_no" required>
+      <mat-hint>Enter your number in this format xxx-xxx-xxxx. This is required field</mat-hint>
+    </mat-form-field>
+    <mat-form-field [ngClass]="'acctit'" appearance="outline">
+      <mat-label>Position</mat-label>
+      <input matInput formControlName="acc_tit" required>
+      <mat-hint>This is required field</mat-hint>
+    </mat-form-field>
+    <mat-form-field [ngClass]="''" appearance="outline">
+      <mat-label>Email ID</mat-label>
+      <input matInput formControlName="acc_tit" required>
+      <mat-hint>This is required field</mat-hint>
+    </mat-form-field>
+    <mat-form-field [ngClass]="'acctit'" appearance="outline">
+      <mat-label>Password</mat-label>
+      <input matInput formControlName="acc_tit" required>
+      <mat-hint>This is required field</mat-hint>
+    </mat-form-field>
+    </div>
+    <p [ngClass]="'tabhea mtop'">Secondary Account Contact</p> 
+    <div [ngClass]="'firstg'">
+    <mat-form-field [ngClass]="'acctit'" appearance="outline">
+      <mat-label>Full Name</mat-label>
+      <input matInput formControlName="acc_tit" required>
+      <mat-hint>This is required field</mat-hint>
+    </mat-form-field>
+    <mat-form-field [ngClass]="'contno'" appearance="outline">
+      <mat-label>Contact No.</mat-label>
+      <input matInput formControlName="cont_no" required>
+      <mat-hint>Enter your number in this format xxx-xxx-xxxx. This is required field</mat-hint>
+    </mat-form-field>
+    <mat-form-field [ngClass]="'acctit'" appearance="outline">
+      <mat-label>Position</mat-label>
+      <input matInput formControlName="acc_tit" required>
+      <mat-hint>This is required field</mat-hint>
+    </mat-form-field>
+    <mat-form-field [ngClass]="''" appearance="outline">
+      <mat-label>Email ID</mat-label>
+      <input matInput formControlName="acc_tit" required>
+      <mat-hint>This is required field</mat-hint>
+    </mat-form-field>
+    </div>
+    <p [ngClass]="'tabhea mtop'">KYC Information</p> 
+    <div [ngClass]="'firstg'">
+    <mat-form-field [ngClass]="'paca'" appearance="outline">
+      <mat-label>PACA License No.</mat-label>
+      <input matInput formControlName="acc_tit" required>
+      <mat-hint>This is required field</mat-hint>
+    </mat-form-field>
+    <label>
+    	<p [ngClass]="'labbel'">Document Verification</p>
+      <input [ngClass]="'none'" type="file" formControlName="verif_d" name="image" required/>
+      <img src="assets/images/mult_file.png">
+    </label>
+    </div>
+	</form>
+</div>

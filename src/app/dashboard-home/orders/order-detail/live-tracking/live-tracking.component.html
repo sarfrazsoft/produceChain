@@ -1,0 +1,55 @@
+<button mat-dialog-close [ngClass]="'clobut'">X</button>
+
+<p [ngClass]="'coninf'">Order No. 8654</p>
+
+<mat-dialog-content class="mat-typography">
+
+<div [ngClass]="'padd'">
+
+	<table  [ngClass]="'simple left'" style="width:50%">
+	  <tr>
+	    <td [ngClass]="'boll'">Temperature:</td>
+	    <td>78F</td>
+	  </tr>
+	  <tr>
+	    <td [ngClass]="'boll'">Humidity:</td> 
+	    <td>65F </td>
+	  </tr>  
+	  <tr>
+	    <td [ngClass]="'boll'">Last Updated by:</td>
+	    <td>John Smith 10:13am 12/12</td>
+	  </tr>
+	</table>
+
+	<agm-map [latitude]="lat" [longitude]="lng">
+	  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+	  <agm-marker [latitude]="lat2" [longitude]="lng2"></agm-marker>
+	</agm-map>
+ 
+	<table  [ngClass]="'end'" style="width:100%">
+	  <tr>
+	    <td [ngClass]="'boll'">Last Shipping Update:</td>
+	    <td>
+	    03/01 12:45pm<br>
+	    Loaded on shipping dock Philadelphia awaiting departure
+	    <br>.<br>.<br>
+
+			<form [ngClass]="''" [formGroup]="updForm">
+				<input [ngClass]="'update'" type="text" formControlName="update" placeholder="Add update to order status*">
+				<div *ngIf="submitted && updForm.controls.update.errors" class="error">
+					<div *ngIf="updForm.controls.update.errors">Update to order status is required!</div>
+				</div>
+				<mat-checkbox [ngClass]="'chkbox'" formControlName="checkb" color='warn'>Update customer on delivery status</mat-checkbox>
+				<div *ngIf="submitted && updForm.controls.update.errors" class="error">
+					<div *ngIf="updForm.controls.update.errors">Update to order status is required!</div>
+				</div>
+				<input type="submit" value="Update">
+			</form>
+
+	    </td>
+	  </tr>
+	</table>
+
+</div>
+
+</mat-dialog-content>

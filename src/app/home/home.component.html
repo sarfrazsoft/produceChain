@@ -1,0 +1,92 @@
+<app-nav></app-nav>
+
+<div [ngClass]="'slider'">
+  <slideshow [height]="height"
+             [minHeight]="'575px'"
+             [autoPlay]="true"
+             [showArrows]="false"
+             [showDots] = "true"
+             [autoPlayInterval] = "5000"
+             [imageUrls]="imageSources"
+             [lazyLoad]="imageSources?.length > 1"
+             [autoPlayWaitForLazyLoad]="true">
+  </slideshow>
+</div>
+
+<div [ngClass]="'fulwid gracon'">
+	<div [ngClass]="'wrapper'">
+		<div [ngClass]="'half'"><img src="assets/images/sec1img1.png"></div>
+		<div [ngClass]="'half'">
+			<h1 [ngClass]="'home'">Paragraph Title 1</h1>
+			<p [ngClass]="'subtitle'">Paragraph sub title size</p>
+			<p [ngClass]="'p3'">Lorem ipsum dolor sit amet, consectetur
+				adipisicing elit, sed do eiusmod tempor 
+				incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud 
+				exercitation ullamco laboris nisi ut aliquip ex 
+				ea commodo consequat. Duis aute irure dolor 
+				in reprehenderit in voluptate velit esse cillum 
+				dolore eu fugiat nulla pariatur. Excepteur sint 
+				occaecat cupidatat non proident, sunt in culpa 
+				qui  officia deserunt mollit anim id est laborum. 
+			</p>
+		</div>
+	</div>
+	<div [ngClass]="'wrapper'">
+		<div [ngClass]="'half'">
+			<h1 [ngClass]="'home'">Paragraph Title 2</h1>
+			<p [ngClass]="'subtitle'">Paragraph sub title size</p>
+			<p [ngClass]="'p3'">Lorem ipsum dolor sit amet, consectetur
+				adipisicing elit, sed do eiusmod tempor 
+				incididunt ut labore et dolore magna aliqua. 
+				Ut enim ad minim veniam, quis nostrud 
+				exercitation ullamco laboris nisi ut aliquip ex 
+				ea commodo consequat. Duis aute irure dolor 
+				in reprehenderit in voluptate velit esse cillum 
+				dolore eu fugiat nulla pariatur. Excepteur sint 
+				occaecat cupidatat non proident, sunt in culpa 
+				qui  officia deserunt mollit anim id est laborum. 
+			</p>
+		</div>
+		<div [ngClass]="'half'"><img src="assets/images/sec1img2.png"></div>
+	</div>		
+	
+	<div ><img src="assets/images/separater.png"></div>
+
+	<div [ngClass]="'container faqs'">
+		<h1 [ngClass]="'home'">FAQ</h1>
+			
+			<mat-accordion>
+			
+			<mat-expansion-panel [ngClass]="'graybg'">
+			<mat-expansion-panel-header [ngClass]="'faqtit'">
+			  Lorem ipsum dolor sit amet, consectetur adipisicing elit?
+			</mat-expansion-panel-header>
+			<p  [ngClass]="'p3'">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			</p>
+			<a href="#">Learn More</a>
+			</mat-expansion-panel>
+
+			<mat-expansion-panel [ngClass]="'graybg'">
+			<mat-expansion-panel-header [ngClass]="'faqtit'">
+			  Ipsum dolor orem ipsum dolor sit amet, consectetur adipisicing elit?
+			</mat-expansion-panel-header>
+			<p  [ngClass]="'p3'">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			</p>
+			<a href="#">Learn More</a>
+			</mat-expansion-panel>
+			
+			<mat-expansion-panel [ngClass]="'graybg'">
+			<mat-expansion-panel-header [ngClass]="'faqtit'">
+			  Lorem ipsum dolor sit  orem ipsum dolor sit amet, consectetur adipisicing elit?
+			</mat-expansion-panel-header>
+			<p  [ngClass]="'p3'">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			</p>
+			<a href="#">Learn More</a>
+			</mat-expansion-panel>
+
+			</mat-accordion>
+	</div>
+</div>
+
+<app-footer></app-footer>

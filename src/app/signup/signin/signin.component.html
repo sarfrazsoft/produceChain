@@ -1,0 +1,32 @@
+<div [ngClass]="'fulhei'">
+	<a routerLink="/contact" [ngClass]="'contact'"> <img src="assets/images/mesico.png"> Contact Us</a>
+	<div [ngClass]="'central'">
+		<img src="assets/images/logo.png">
+
+		<p  [ngClass]="'headin'">Sign In</p>
+
+		<form [formGroup]="signin2Form" ngSubmit="onSubmit()">
+			
+			<h5 *ngIf="success">Your form is valid!</h5>
+			<label>
+			  Email Address
+			<input [ngClass]="'email'" type="email" formControlName="email" placeholder="id@website.com">
+			</label>
+			<div *ngIf="submitted && signin2Form.controls.email.errors" class="error">
+				<div *ngIf="signin2Form.controls.email.errors">Email is required!</div>
+			</div>
+			<label>
+			  Password
+			<input [ngClass]="'password'" type="password" formControlName="password" placeholder="********">
+			</label>
+			<div *ngIf="submitted && signin2Form.controls.password.errors" class="error">
+				<div *ngIf="signin2Form.controls.password.errors">Password is required!</div>
+			</div>
+			<input routerLink="/dashboard-home" [ngClass]="'submitt'" type="submit" value="Sign in">
+			<a routerLink="/signup" [ngClass]="'crt'">Create Account</a>
+			<a routerLink="/password-recovery" [ngClass]="'fgt'">Forgot Password</a>
+		</form>
+	</div>
+	<p [ngClass]="'botleft'">All rights reserved 2019 | <span> Produce Chain LLC </span></p>
+	<p [ngClass]="'botrigh'">Photo courtesy by Unsplash.com</p>
+</div>

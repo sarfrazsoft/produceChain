@@ -1,0 +1,94 @@
+.clobut {
+  float: right;
+  border: unset;
+  font-family: ProximaNova-Semibold;
+  color: #a4a4a4;
+  background: unset;
+  cursor: pointer;
+  &:focus {
+  	outline: unset;
+  }
+}
+.coninf {
+	line-height: 22px;
+  margin: 33px;
+	text-align: center;
+	font-family: ProximaNovaRegular;
+	color: #354052;
+	font-size: 22px;
+	margin-block-start: 7px;
+}
+// ::ng-deep .mat-form-field-infix {
+.mat-form-field-infix {
+   border-top: 0;
+}
+// ::ng-deep .mat-form-field-infix::after {
+.mat-form-field-infix::after {
+  margin-top: 0px !important;
+}
+// ::ng-deep .mat-form-field {
+.mat-form-field {
+    font-size: 14px;
+    height: 70px;
+    width: 35%;
+}
+// ::ng-deep .mat-form-field-appearance-outline .mat-form-field-label {
+.mat-form-field-appearance-outline .mat-form-field-label {
+    top: 2.3em;
+    font-family: ProximaNova-SemiBold;
+    color: #354052;
+}
+form {
+	text-align: center;
+	// margin-top: 5%;
+	.marrig {
+		margin-right: 10%;
+	}
+}
+.linbrk {
+	border-bottom: 2px solid #f0f3f8;
+  display: block;
+  width: 88%;
+  margin: 0px auto;
+  margin-bottom: 35px;
+  margin-top: 5px;
+  clear: both;
+}
+.speca {
+	float: left;
+  margin-left: 10%;
+}
+img {
+	width: auto;
+}
+.none {
+	display: none;
+}
+.labbel {
+	font-family: ProximaNova-SemiBold;
+  color: #354052;
+}
+.senter { 
+  display: block;
+  margin: 0px auto;
+}
+.morbot {
+	margin-top: 22px;
+}
+.chkbox {
+	disply: block;
+}
+.next {
+		width: 127px;
+    clear: both;
+    background: url(/assets/images/rigaro.png) no-repeat scroll 93px 13px;
+		color: #fff;
+		background-color: #36ae46;
+		margin: 0px auto;
+    border-radius: 3px;
+    text-align: center;
+    padding-left: 0px;
+    display: block;
+    margin-top: 33px;
+    margin-bottom: 22px;
+}

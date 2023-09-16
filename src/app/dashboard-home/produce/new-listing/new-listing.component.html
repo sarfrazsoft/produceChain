@@ -1,0 +1,117 @@
+<button mat-dialog-close [ngClass]="'clobut'">X</button>
+<p [ngClass]="'coninf'">New Produce Listing</p>
+<mat-dialog-content class="mat-typography">
+<form [ngClass]="'steptwo'" [formGroup]="firstFormGroup">
+  <mat-form-field [ngClass]="'marrig'" appearance="outline">
+  <mat-label>Product Group</mat-label>
+  <select matNativeControl formControlName="firstCtrl" required>
+    <option value="volvo">Apple</option>
+    <option value="saab">Banana</option>
+    <option value="mercedes">Pear</option>
+    <option value="audi">*New Group</option>
+  </select>
+	</mat-form-field>
+  <mat-form-field [ngClass]="'three'" appearance="outline">
+    <mat-label>Product Name</mat-label>
+    <input matInput formControlName="firstCtrl" required>
+  </mat-form-field>
+  <mat-form-field [ngClass]="'marrig'" appearance="outline">
+  <mat-label>Product Size</mat-label>
+  <select matNativeControl formControlName="firstCtrl"  required>
+    <option value="volvo">Small</option>
+    <option value="saab">Medium</option>
+    <option value="mercedes">Large</option>
+  </select>
+	</mat-form-field>
+  <mat-form-field [ngClass]="'three'" appearance="outline">
+    <mat-label>Product Description</mat-label>
+    <input matInput formControlName="firstCtrl" required>
+  </mat-form-field>
+  <mat-form-field [ngClass]="'marrig'" appearance="outline">
+    <mat-label>Product Color</mat-label>
+    <input matInput formControlName="firstCtrl" required>
+  </mat-form-field>
+  <mat-form-field [ngClass]="'three'" appearance="outline">
+    <mat-label>Product Detail</mat-label>
+    <input matInput formControlName="firstCtrl" required>
+  </mat-form-field>
+
+  <span [ngClass]="'linbrk'"></span>
+
+  <mat-form-field [ngClass]="'marrig'" appearance="outline">
+  <mat-label>How is the product sold?</mat-label>
+  <select matNativeControl formControlName="firstCtrl"  required>
+    <option value="volvo">By units</option>
+    <option value="saab">By pounds</option>
+  </select>
+	</mat-form-field>
+  <mat-form-field [ngClass]="''" appearance="outline">
+    <mat-label>How many units are available in inventory?</mat-label>
+    <input matInput formControlName="firstCtrl" required>
+  </mat-form-field>
+  <mat-form-field [ngClass]="'speca'" appearance="outline">
+    <mat-label>What is the price per unit?</mat-label>
+    <input matInput formControlName="firstCtrl" required>
+  </mat-form-field>
+
+  <span [ngClass]="'linbrk'"></span>
+
+  <mat-form-field [ngClass]="'marrig'" appearance="outline">
+  <mat-label>Is the product labeled?</mat-label>
+  <select matNativeControl formControlName="firstCtrl" required>
+    <option value="volvo">Yes</option>
+    <option value="saab">No</option>
+  </select>
+	</mat-form-field>
+  <mat-form-field [ngClass]="'three'" appearance="outline">
+    <mat-label>What is the labelling?</mat-label>
+    <input matInput formControlName="firstCtrl" required>
+  </mat-form-field>
+  <mat-form-field [ngClass]="'marrig'" appearance="outline">
+    <mat-label>Where is the location?</mat-label>
+    <input matInput formControlName="firstCtrl" required>
+  </mat-form-field>
+  <mat-form-field [ngClass]="''" appearance="outline">
+    <mat-label>What is the timeframe from order to ship?</mat-label>
+    <input matInput formControlName="firstCtrl" required>
+  </mat-form-field>
+  <mat-form-field [ngClass]="'marrig'" appearance="outline">
+  <mat-label>What are the shipping details?</mat-label>
+  <select matNativeControl formControlName="firstCtrl" required>
+    <option value="volvo">FAS</option>
+    <option value="saab">FOB</option>
+    <option value="saab">CIF</option>
+    <option value="saab">Other</option>
+  </select>
+	</mat-form-field>
+  <mat-form-field [ngClass]="'three'" appearance="outline">
+    <mat-label>Details buyers should know about product</mat-label>
+    <input matInput formControlName="firstCtrl" required>
+  </mat-form-field>
+
+  <span [ngClass]="'linbrk'"></span>
+
+ 	<label>
+  	<p [ngClass]="'labbel'">Upload any additional documents/notes about product</p>
+    <input [ngClass]="'none'" type="file" formControlName="firstCtrl" name="image" required/>
+    <img src="assets/images/mult_file.png">
+  </label>
+
+	<span [ngClass]="'linbrk morbot'"></span>
+
+	<p [ngClass]="'labbel'">Unique product ID: <span>AP1825</span></p>
+  <mat-form-field [ngClass]="'senter'" appearance="outline">
+  <mat-label>Product Status</mat-label>
+  <select matNativeControl formControlName="firstCtrl" required>
+    <option value="active">ACTIVE</option>
+    <option value="inactive">INACTIVE</option>
+  </select>
+	</mat-form-field>
+	
+	<mat-checkbox [ngClass]="'chkbox'" color='warn'>I have verifed that the information above is correct.</mat-checkbox>
+
+	<button type="submit" [ngClass]="'next'" mat-button>Proceed</button>
+
+</form>
+
+</mat-dialog-content>

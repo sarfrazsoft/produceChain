@@ -1,0 +1,36 @@
+<div class="bgimg">
+	<div [ngClass]="'container'">
+    	<div [ngClass]="'col1'">
+    		<h2>Subscribe</h2>
+    		<p>Join to get to know about latest advancements, exciting offers, product and industry updates.</p>
+
+    		<form [formGroup]="subsForm" ngSubmit="onSubmit()">
+    			
+    			<h5 *ngIf="success">Your form is valid!</h5>
+
+    			<label>
+    				<input [ngClass]="'emaill'" type="email" formControlName="email">
+    				<div *ngIf="submitted && subsForm.controls.email.errors" class="error">
+    					<div *ngIf="subsForm.controls.email.errors">Email is required!</div>
+    				</div>
+    				<input [ngClass]="'submitt'" type="submit" value="Subscribe" class="cta">
+    			</label>
+    		</form>
+    	</div>
+	
+		<div [ngClass]="'col2'">
+			<ul>
+				<li><a href="">Producers</a></li>
+				<li><a href="">Wholesalers & Retailers</a></li>
+				<li><a href="">Logistics, Shipping & Financial</a></li>
+				<li><a href="">Contact Us</a></li>
+				<li><a href="" [ngClass]="'followus'">Follow us</a><br><br>
+					<a href=""><img src="assets/images/fb.png"></a>
+          <a href=""><img src="assets/images/in.png"></a>
+          <a href=""><img src="assets/images/tw.png"></a>
+				</li>
+			</ul>
+		</div>
+    <div [ngClass]="'copyright'">Cyfer Distributed Ledger Technologies LLC. Copyright 2019.</div>
+  </div>
+</div>

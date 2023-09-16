@@ -1,0 +1,39 @@
+.menuar, .bodye {
+  height: fit-content;
+}
+body {
+  BACKGROUND-COLOR: #007900;
+}
+.bodye {
+    min-height: 100%;
+    background-size: cover;
+    position: absolute;
+    top: 75px;
+    right: 0;
+  	background-color: #eff3f6;
+    padding: 3%;
+    margin-top: -3px;
+    float: left;
+    width: 75%;
+    .tabhea {
+      float: left;
+	    color: #354052;
+	    font-size: 20px;
+	    font-family: ProximaNovaRegular;
+	    a {
+		  font-size: 13px;
+		  margin-left: 13px;
+		  color: #7f8fa4;
+		}	
+	}
+  .ffulwidt {
+    float: left;
+    width: 100%;
+    &.next {
+      margin-top: 33px;
+    }
+  }
+}
+.ffield {
+  float: right;
+}

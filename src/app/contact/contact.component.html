@@ -1,0 +1,97 @@
+<app-nav></app-nav>
+
+<div [ngClass]="'defdiv'">
+<img src="assets/images/contact-us-banner.png">
+</div>
+
+<div [ngClass]="'fulwid graybg defdiv'">
+	<div [ngClass]="'wrapper'">
+		<div  [ngClass]="'box'">
+			<div [ngClass]="'half first'">
+				<div [ngClass]="'map'">
+					<ul>
+						<li [ngClass]="'map'">Two Logan Square Suite #820 Philadelphia, PA 19103</li>
+						<li [ngClass]="'ema'">info@mysite.com</li>
+						<li [ngClass]="'pho'">(123) 456 7890</li>
+					</ul>
+				</div>
+			</div>
+			<div [ngClass]="'half'">
+				<ul>
+					<li [ngClass]="'map'">Two Logan Square Suite #820 Philadelphia, PA 19103</li>
+					<li [ngClass]="'ema'">info@mysite.com</li>
+					<li [ngClass]="'pho'">(123) 456 7890</li>
+				</ul>
+			</div>
+			<div [ngClass]="'innwra'">
+				<h2>Contact us today</h2>
+				<p  [ngClass]="'info'">Your Information</p>
+
+				<form [formGroup]="contForm" ngSubmit="onSubmit()">
+					
+					<h5 *ngIf="success">Your form is valid!</h5>
+
+					<input [ngClass]="'fname'" type="text" formControlName="fname" placeholder="First Name*">
+					<div *ngIf="submitted && contForm.controls.fname.errors" class="error">
+						<div *ngIf="contForm.controls.fname.errors">First name is required!</div>
+					</div>
+					<input [ngClass]="'lname'" type="text" formControlName="lname" placeholder="Last Name*">
+					<div *ngIf="submitted && contForm.controls.lname.errors" class="error">
+						<div *ngIf="contForm.controls.lname.errors">Last name is required!</div>
+					</div>
+					<input [ngClass]="'job'" type="text" formControlName="job" placeholder="Job Title*">
+					<div *ngIf="submitted && contForm.controls.job.errors" class="error">
+						<div *ngIf="contForm.controls.job.errors">Job title is required!</div>
+					</div>
+					<input [ngClass]="'phone'" type="text" formControlName="phone" placeholder="Phone Number*">
+					<div *ngIf="submitted && contForm.controls.phone.errors" class="error">
+						<div *ngIf="contForm.controls.phone.errors">Phone number is required!</div>
+					</div>
+					<input [ngClass]="'email'" type="email" formControlName="email" placeholder="Email*">
+					<div *ngIf="submitted && contForm.controls.email.errors" class="error">
+						<div *ngIf="contForm.controls.email.errors">Email is required!</div>
+					</div>
+					<input [ngClass]="'state'" type="text" formControlName="state" placeholder="State*">
+					<div *ngIf="submitted && contForm.controls.state.errors" class="error">
+						<div *ngIf="contForm.controls.state.errors">State name is required!</div>
+					</div>
+					<input [ngClass]="'company'" type="text" formControlName="company" placeholder="Company*">
+					<div *ngIf="submitted && contForm.controls.company.errors" class="error">
+						<div *ngIf="contForm.controls.company.errors">Company information is required!</div>
+					</div>
+					<div  [ngClass]="'radios'">
+					<input type="radio" formControlName="oftype" value="Producer/Farmer" id="prod">
+					<label for="prod">Producer/Farmer</label>
+					</div>
+					<div  [ngClass]="'radios'">
+				    <input type="radio" formControlName="oftype" value="Wholeseller" id="whol">
+				    <label for="whol">Wholeseller</label>
+				    </div>
+				    <div  [ngClass]="'radios'">
+				    <input type="radio" formControlName="oftype" value="Retailer" id="reta">
+				    <label for="reta">Retailer</label>
+				    </div>
+				    <div  [ngClass]="'radios'">
+				    <input type="radio" formControlName="oftype" value="Logistics" id="logi">
+				    <label for="logi">Logistics</label>
+				    </div>
+				    <div  [ngClass]="'radios'">
+				    <input type="radio" formControlName="oftype" value="Shipping" id="ship">
+				    <label for="ship">Shipping</label>
+				    </div>
+				    <div  [ngClass]="'radios'">
+				    <input type="radio" formControlName="oftype" value="Finacial" id="fina">
+				    <label for="fina">Finacial</label>
+				    </div>
+				    <div  [ngClass]="'radios'">
+				    <input type="radio" formControlName="oftype" value="Others" id="othe">
+				    <label for="othe">Others</label>
+				    </div>
+					<input [ngClass]="'submitt'" type="submit" value="submit">
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+
+<app-footer></app-footer>

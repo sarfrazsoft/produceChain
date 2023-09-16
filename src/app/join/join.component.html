@@ -1,0 +1,36 @@
+<div [ngClass]="'fulhei'">
+	<div [ngClass]="'wrapp'">
+		<div [ngClass]="'central'">
+			<img src="assets/images/logio.png">
+
+			<p  [ngClass]="'headin'">Join ProduceChain</p>
+
+			<form [formGroup]="joinForm" ngSubmit="onSubmit()">
+				
+				<h5 *ngIf="success">Your form is valid!</h5>
+
+				<input [ngClass]="'company'" type="text" formControlName="company" placeholder="Company Name*">
+				<div *ngIf="submitted && joinForm.controls.company.errors" class="error">
+					<div *ngIf="joinForm.controls.company.errors">Company information is required!</div>
+				</div>
+				<input [ngClass]="'email'" type="email" formControlName="email" placeholder="Email Address*">
+				<div *ngIf="submitted && joinForm.controls.email.errors" class="error">
+					<div *ngIf="joinForm.controls.email.errors">Email is required!</div>
+				</div>
+				<input [ngClass]="'password'" type="password" formControlName="password" placeholder="Password*">
+				<div *ngIf="submitted && joinForm.controls.password.errors" class="error">
+					<div *ngIf="joinForm.controls.password.errors">Password is required!</div>
+				</div>
+				<input [ngClass]="'userid'" type="text" formControlName="userid" placeholder="User ID*" >
+				<img [ngClass]="'tootip'" src="assets/images/ttip.png" matTooltip="*this is your public ID for all activities using ProduceChain" matTooltipPosition="right" matTooltipClass="setwid">
+				<div *ngIf="submitted && joinForm.controls.userid.errors" class="error">
+					<div *ngIf="joinForm.controls.userid.errors">User ID is required!</div>
+				</div>
+				<label [ngClass]="'toslab'"><input [ngClass]="'tos'" formControlName="tos" type="checkbox">I agree to Terms of Service and Conditions</label>
+				<a routerLink="/dashboard-home" [ngClass]="'submitt'">Next</a>
+			</form>
+		</div>
+		<p [ngClass]="'botlef'">All rights reserved 2019 | <span> Produce Chain LLC </span></p>
+		<p [ngClass]="'botrig'">Photo courtesy by Unsplash.com</p>
+	</div>
+</div>

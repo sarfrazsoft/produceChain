@@ -1,0 +1,62 @@
+.topall {
+	background-image: url(/assets/images/topban.png);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100%;
+}
+
+.bacimage {
+    background-image: url(/assets/images/botban.png);
+    display: inline-block;
+    width: 100%;
+    background-size: contain;
+    background-color: #eaeaea;
+    background-repeat: no-repeat;
+    .container {
+        padding: 0;
+    }
+  .col1 {
+      width: 100%;
+        .getsh1 {
+        	text-align: center;
+        	font-family: gotham-book;
+        	margin-top: 8px;
+		    margin-bottom: 8px;
+            span {
+                color: #abc211;
+                font-family: gotham-bold;
+                font-size: 55px;
+            }
+        }
+  }
+  .col2 {
+    width: 100%;
+      margin-top: 6%;
+	  a {
+		    text-align: center;
+		    display: block;
+		    background-color: #004100;
+		    border-radius: 30px;
+		    color: #eaeaea;
+		    font-family: gotham-bold;
+		    font-size: 19px;
+		    width: 210px;
+		    padding: 1%;
+		    margin: 0px auto;
+		    margin-bottom: 7%;
+        }
+  }
+}
+
+@media (max-width: 760px) {
+    .bacimage .col1 .getsh1 span {
+        font-size: 37px;
+    }
+    .bacimage .col1 .getsh1 {
+        font-size: 30px;
+    }
+    .bacimage .col2 a {
+       margin-bottom: 15%;
+           padding: 2%;
+    }
+}

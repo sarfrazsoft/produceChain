@@ -1,0 +1,41 @@
+<div [ngClass]="'fulhei'">
+	<div [ngClass]="'wrapp'">
+		<a routerLink="/contact" [ngClass]="'contact'"> <img src="assets/images/mesico.png"> Contact Us</a>
+
+		<div [ngClass]="'central'">
+			<div [ngClass]="'left'">
+				<img src="assets/images/logio.png">
+				<p [ngClass]="'iama'">I am a...</p>
+	
+				<div id="ck-button">
+				   <label>
+				      <input type="checkbox" value="1"><span>Producer/ Farmer</span>
+				   </label>
+				</div>
+				<div id="ck-button">
+				   <label>
+				      <input type="checkbox" value="1"><span>WholeSaler/Retailer</span>
+				   </label>
+				</div>
+				<div id="ck-button">
+				   <label>
+				      <input type="checkbox" value="1"><span>Logistics/Financial/Shipping</span>
+				   </label>
+				</div>
+				<a routerLink="/join" [ngClass]="'next'">Next</a>
+				<a routerLink="/signin" [ngClass]="'alrdy'">Already have an account? Sign in</a>
+
+			</div>
+			<div [ngClass]="'right'">
+				<div [ngClass]="'contnt'">
+					<p  [ngClass]="'headi'">Image with <span>Category</span></p>
+					<p  [ngClass]="'txti'">This is the suporting text for the selected category that changes when user selects the option.</p>
+				</div>
+			</div>
+			
+		</div>
+
+		<p [ngClass]="'botlef'">All rights reserved 2019 | <span> Produce Chain LLC </span></p>
+		<p [ngClass]="'botrig'">Photo courtesy by Unsplash.com</p>
+	</div>
+</div>

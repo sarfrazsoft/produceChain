@@ -1,0 +1,157 @@
+p {
+    color: #354052;
+    font-family: proximanovaregular;
+}
+.bodye {
+    background-size: cover;
+    position: absolute;
+    top: 75px;
+    right: 0;
+  	background-color: #eff3f6;
+    padding: 3%;
+    margin-top: -3px;
+    float: left;
+    width: 75%;
+    height: 1110px;
+    .tabhea {
+	    color: #354052;
+	    font-size: 20px;
+	    font-family: ProximaNovaRegular;
+	    margin-top: 10px;
+        float: left;
+        margin-right: 33px;
+        margin-bottom: 0px;
+	}
+    .next {
+        width: 120px;
+        float: right;
+        background: url(/assets/images/subico.png) no-repeat scroll 20px 9px;
+        color: #fff;
+        background-color: #36ae46;
+        margin: 0px auto;
+        border-radius: 3px;
+        text-align: center;
+        padding-left: 44px;  
+    }
+    .crch {
+        width: 53%;
+        padding: 10px;
+        border-radius: 3px;
+        border: 1.5px solid #dfe3e9;
+        color: #1bb934;
+        font-family: proximanova-semibold;
+        font-size: 14px;
+    }
+}
+
+.pgdiv {
+    margin: 0px auto;
+    display: block;
+    text-align: center;
+    clear: both;
+    margin-top: 10%;
+    p {
+        font-size: 18px;
+        font-family: proximanova-semibold;
+        color: #354052;
+        padding: 1% 25%;
+        line-height: 21px;
+    }
+    img {
+        width: 80px;
+    }
+}
+.product {
+    background: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    width: 212px;
+    display: inline-block;
+    float: left;
+    margin-top: 60px;
+    margin-right: 22px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.1);
+    img.proimg {
+        width: 100%;
+    }
+    .lefti {
+        float: left;
+        width: 50%;
+        .group {
+            font-size: 20px;
+            font-family: proximanova-semibold;
+            color: #354052;
+            margin-top: 12px;
+            margin-bottom: 8px;
+        }
+    }
+    .rigti {
+        width: 50%;
+        float: right;
+        .type  {
+            font-size: 12px;
+            float: right;
+            text-transform: capitalize;
+            margin-bottom: 8px;
+        }
+        .rating {
+            clear: both;
+            float: right;
+            .mat-icon {
+                width: 13px;
+                height: 13px;
+                color: #fcc11f;
+                font-size: 17px;
+                float: right;
+                margin-right: 2px;
+            }
+        }
+    }
+    .code {
+        font-size: 13px;
+        margin-top: 0px;
+        font-family: proximanovaregular;
+    }
+    .price_per_unit, .units {
+        float: left;
+        margin-top: 0px;
+        margin-bottom: 4px;
+        font-size: 17px;
+        clear: both;
+        img  {
+            width: 16px;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+    }
+}
+.linbrk {
+    border-bottom: 2px solid #f0f3f8;
+    display: block;
+    margin: 0px auto;
+    padding-top: 8px;
+    clear: both;
+}
+.total {
+    font-size: 22px;
+    text-align: center;
+    font-family: proximanova-semibold;
+    color: #1bb934;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+.info, .cart {
+    padding: 0px 12px;
+    line-height: 32px;
+    color: #fff;
+    background-color: #36b047;
+    margin: 0px auto;
+    border-radius: 4px;
+    text-align: center;
+}
+.info {
+    float: left;
+}
+.cart {
+    float: right;
+}

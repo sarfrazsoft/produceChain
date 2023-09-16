@@ -1,0 +1,158 @@
+#ck-button {
+    border-radius:4px;
+    margin-bottom: 25px;
+}
+
+#ck-button:hover {
+	border: 1px solid #38b148;
+    background: url(/assets/images/check.png) no-repeat scroll 272px 13px;
+}
+
+#ck-button label {
+    color: #354052;
+}
+
+#ck-button label span {
+    padding:3px 0px;
+    display: block;
+    padding: 10px;
+    border: 1px solid #e2e6eb;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 15px;
+}
+
+#ck-button label input {
+    position:absolute;
+    top:-20px;
+}
+
+#ck-button input:checked + span {
+    border: 1px solid #38b148;
+    background: url(/assets/images/check.png) no-repeat scroll 272px 13px;
+}
+
+img {
+	width: auto;
+}
+
+.fulhei {
+	background-image: url(/assets/images/login.jpg);
+	height: 100%;
+	background-size: cover;
+	.wrapp {
+		padding: 3% 6%;
+	    display: inline-block;
+	    width: 88%;
+	    height: 88%;
+	}
+	.contact {
+		font-family: SourceSansPro-SemiBold;
+		font-size: 15px;
+	    float: right;
+	    color: #fff;
+	    background: #37b148;
+	    padding: 8px 15px;
+	    border-radius: 4px;
+		img {
+		    width: auto;
+	    	margin-right: 5px
+	    }
+	}
+	.botlef {
+	    width: 40%;
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    padding: 2% 6%;
+	    color: #fff;
+	}
+	.botrig {
+	    width: 40%;
+	    color: #fff;
+	    position: absolute;
+	    bottom: 0;
+	    right: 0;
+	    padding: 2% 6%;
+	    text-align: right;
+	}
+	p {
+		font-family: ProximaNovaRegular;
+		font-size: 14px;
+		span {
+		    font-weight: bold;
+		}
+	}
+	.central {
+	    margin: 0px auto;
+	    display: block;
+	    width: 882px;
+	    margin-top: 8%;
+	    .left {
+	    	height: 353px;
+	    	width: 300px;
+	    	float: left;
+	    	background-color: #fff;
+		    padding: 33px;
+		    border-top-left-radius: 5px;
+		    border-bottom-left-radius: 5px;
+		    img {
+			    margin-top: -57px;
+			    position: absolute;
+			}
+			.iama {
+			    font-size: 24px;
+			    color: #354052;
+			}
+			.blablu {
+				color: #354052;
+				font-size: 14px;
+			}
+			.next {
+				color: #fff;
+				background-color: #38b148;
+				font-size: 14px;
+			}
+			.alrdy {
+				border: unset;
+			    text-decoration: underline;
+			    color: #354052;
+			}
+			a {
+			    display: block;
+			    padding: 10px;
+			    border: 1px solid #e2e6eb;
+			    border-radius: 3px;
+			    text-align: center;
+			    font-size: 15px;
+			    margin-bottom: 25px;
+			}
+	    }	
+		.right {
+			position: relative;
+			background-size: cover;
+    		height: 353px;
+			width: 450px;
+			float: right;
+			background-image: url(/assets/images/sliimg.png);
+			border-top-right-radius: 5px;
+		    border-bottom-right-radius: 5px;
+		    padding: 33px;
+		    .contnt {
+		    	position: absolute;
+		    	bottom: 33px;
+		    	color: #fff;
+		    	span {
+		    		font-family: SourceSansPro-SemiBold;
+		    	}
+		    	.headi {
+		    	    font-size: 26px;
+		    	    margin-block-end: 12px;
+		    	}
+		    	.txti {
+		    	    font-size: 18px;
+		    	}
+		    }
+		}
+	}
+}

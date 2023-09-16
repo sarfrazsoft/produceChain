@@ -1,0 +1,209 @@
+<app-dashboard-header></app-dashboard-header>
+<app-dashboard-menu></app-dashboard-menu>
+
+<div [ngClass]="'bodye'">
+
+	<div  [ngClass]="'ffulwidt'">
+
+		<p  [ngClass]="'tabhea'">Current Orders</p> 
+
+		<mat-form-field [ngClass]="'ffield'">
+		  <input matInput (keyup)="applyCurrFilter($event.target.value)" placeholder="Search" [ngClass]="'finput'">
+		  <mat-icon matSuffix [ngClass]="'ficon'">search</mat-icon>
+		</mat-form-field>
+		
+		<table mat-table [dataSource]="currDataSource" class="mat-elevation-z8">
+
+		  <ng-container matColumnDef="order_no">
+		    <th mat-header-cell *matHeaderCellDef> ORDER # </th>
+		    <td mat-cell *matCellDef="let element"> {{element.order_no}} </td>
+		  </ng-container>
+
+		  <!-- Name Column -->
+		  <ng-container matColumnDef="customer">
+		    <th mat-header-cell *matHeaderCellDef> customer </th>
+		    <td mat-cell *matCellDef="let element"> {{element.customer}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="location">
+		    <th mat-header-cell *matHeaderCellDef> location </th>
+		    <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="amount">
+		    <th mat-header-cell *matHeaderCellDef> $ amount </th>
+		    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="date_placed">
+		    <th mat-header-cell *matHeaderCellDef> date placed </th>
+		    <td mat-cell *matCellDef="let element"> {{element.date_placed}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="est_delivery">
+		    <th mat-header-cell *matHeaderCellDef> est. delivery </th>
+		    <td mat-cell *matCellDef="let element"> {{element.est_delivery}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="status">
+		    <th mat-header-cell *matHeaderCellDef> status </th>
+		    <td mat-cell *matCellDef="let element"  (click)="onClickCurrent()"> 
+		    <div *ngIf="element.status === 'Preparing'; then thenBlock else elseBlock"></div>
+				<ng-template #thenBlock><a [ngClass]="'preparing'">Preparing</a></ng-template>
+				<ng-template #elseBlock><a [ngClass]="'shipping'">Shipping</a></ng-template>
+		    </td>
+		  </ng-container>
+
+		  <tr mat-header-row *matHeaderRowDef="currDisplayedColumns"></tr>
+		  <tr mat-row *matRowDef="let row; columns: currDisplayedColumns;"></tr>
+		</table>
+
+	</div>
+
+	<div  [ngClass]="'ffulwidt next'">
+
+		<p  [ngClass]="'tabhea'">Pending Orders</p> 
+
+		<mat-form-field [ngClass]="'ffield'">
+		  <input matInput (keyup)="applyPendFilter($event.target.value)" placeholder="Search" [ngClass]="'finput'">
+		  <mat-icon matSuffix [ngClass]="'ficon'">search</mat-icon>
+		</mat-form-field>
+		
+		<table mat-table [dataSource]="pendDataSource" [ngClass]="'pend'" class="mat-elevation-z8">
+
+		  <ng-container matColumnDef="order_no">
+		    <th mat-header-cell *matHeaderCellDef> ORDER # </th>
+		    <td mat-cell *matCellDef="let element"> {{element.order_no}} </td>
+		  </ng-container>
+
+		  <!-- Name Column -->
+		  <ng-container matColumnDef="customer">
+		    <th mat-header-cell *matHeaderCellDef> customer </th>
+		    <td mat-cell *matCellDef="let element"> {{element.customer}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="location">
+		    <th mat-header-cell *matHeaderCellDef> location </th>
+		    <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="amount">
+		    <th mat-header-cell *matHeaderCellDef> $ amount </th>
+		    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="date_placed">
+		    <th mat-header-cell *matHeaderCellDef> date placed </th>
+		    <td mat-cell *matCellDef="let element"> {{element.date_placed}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="est_delivery">
+		    <th mat-header-cell *matHeaderCellDef> est. delivery </th>
+		    <td mat-cell *matCellDef="let element"> {{element.est_delivery}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="status">
+		    <th mat-header-cell *matHeaderCellDef [ngClass]="'status'"> status </th>
+		    <td mat-cell *matCellDef="let element" [ngClass]="'status'" (click)="onClickPendind()"> <a [ngClass]="'orange'"> {{element.status}} </a> </td>
+		  </ng-container>
+
+		  <tr mat-header-row *matHeaderRowDef="pendDisplayedColumns"></tr>
+		  <tr mat-row *matRowDef="let row; columns: pendDisplayedColumns;"></tr>
+		</table>
+
+	</div>
+
+	<div  [ngClass]="'ffulwidt next'">
+
+		<p  [ngClass]="'tabhea'">Past Orders</p> 
+
+		<mat-form-field [ngClass]="'ffield'">
+		  <input matInput (keyup)="applyPastFilter($event.target.value)" placeholder="Search" [ngClass]="'finput'">
+		  <mat-icon matSuffix [ngClass]="'ficon'">search</mat-icon>
+		</mat-form-field>
+		
+		<table mat-table [dataSource]="pastDataSource" [ngClass]="'pend'" class="mat-elevation-z8">
+
+		  <ng-container matColumnDef="order_no">
+		    <th mat-header-cell *matHeaderCellDef> ORDER # </th>
+		    <td mat-cell *matCellDef="let element"> {{element.order_no}} </td>
+		  </ng-container>
+
+		  <!-- Name Column -->
+		  <ng-container matColumnDef="customer">
+		    <th mat-header-cell *matHeaderCellDef> customer </th>
+		    <td mat-cell *matCellDef="let element"> {{element.customer}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="location">
+		    <th mat-header-cell *matHeaderCellDef> location </th>
+		    <td mat-cell *matCellDef="let element"> {{element.location}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="amount">
+		    <th mat-header-cell *matHeaderCellDef> $ amount </th>
+		    <td mat-cell *matCellDef="let element"> {{element.amount}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="date_placed">
+		    <th mat-header-cell *matHeaderCellDef> date placed </th>
+		    <td mat-cell *matCellDef="let element"> {{element.date_placed}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="date_delivered">
+		    <th mat-header-cell *matHeaderCellDef> date delivered </th>
+		    <td mat-cell *matCellDef="let element"> {{element.date_delivered}} </td>
+		  </ng-container>
+
+		  <ng-container matColumnDef="customer_rating">
+		    <th mat-header-cell *matHeaderCellDef [ngClass]="'status'"> customer rating </th>
+		    <td mat-cell *matCellDef="let element" [ngClass]="'status star'" (click)="onClickPast()"> 
+		    <ng-template [ngIf]="element.customer_rating === 1"><mat-icon>star</mat-icon></ng-template>
+		    <ng-template [ngIf]="element.customer_rating === 2"><mat-icon>star</mat-icon><mat-icon>star</mat-icon></ng-template>
+		    <ng-template [ngIf]="element.customer_rating === 3"><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon></ng-template>
+		    <ng-template [ngIf]="element.customer_rating === 4"><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon></ng-template>
+		    <ng-template [ngIf]="element.customer_rating === 5"><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon></ng-template>
+		    </td>
+		  </ng-container>
+
+		  <tr mat-header-row *matHeaderRowDef="pastDisplayedColumns"></tr>
+		  <tr mat-row *matRowDef="let row; columns: pastDisplayedColumns;"></tr>
+		</table>
+
+	</div>
+
+	<div  [ngClass]="'fulwidt'">
+	<p  [ngClass]="'tabhea'">Track My Order Location</p> 
+	<div [ngClass]="'searchbox'">
+		<p [ngClass]="'srchtxt'">Enter Order Number or Customer Name</p>
+		<mat-form-field [ngClass]="'ffield'">
+		  <input matInput (keyup)="applyPastFilter($event.target.value)" placeholder="Search" [ngClass]="'finput'">
+		  <mat-icon matSuffix [ngClass]="'ficon'">search</mat-icon>
+		</mat-form-field>
+	
+		<div [ngClass]="'maycla'">
+			<img src="assets/images/curico.png" [ngClass]="''">
+			<div [ngClass]="'maydiv'"><p [ngClass]="'mayp'">03</p><img src="assets/images/red_arr.png" [ngClass]="'top'"></div>
+			<p  [ngClass]="'srchtxt'">current orders</p>
+		</div>
+
+		<div [ngClass]="'maycla next'">
+			<img src="assets/images/penico.png" [ngClass]="''">
+			<div [ngClass]="'maydiv'"><p [ngClass]="'mayp'">03</p><img src="assets/images/red_arr.png" [ngClass]="'top'"></div>
+			<p  [ngClass]="'srchtxt'">pending orders</p>
+		</div>
+
+		<div [ngClass]="'maycla next'">
+			<img src="assets/images/pasico.png" [ngClass]="''">
+			<div [ngClass]="'maydiv'"><p [ngClass]="'mayp'">03</p><img src="assets/images/gre_arr.png" [ngClass]="'top'"></div>
+			<p  [ngClass]="'srchtxt'">past orders</p>
+		</div>
+		
+	</div>
+	<agm-map [latitude]="lat" [longitude]="lng">
+	  <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+	  <agm-marker [latitude]="lat2" [longitude]="lng2"></agm-marker>
+	</agm-map>
+	</div>
+
+</div>

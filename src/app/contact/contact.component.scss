@@ -1,0 +1,134 @@
+.box {
+    display: inline-block;
+    margin: 5% 5% 10% 5%;
+    background-color: #efefef;
+    border-radius: 20px;
+    width: 90%;
+    -webkit-box-shadow: 3px 3px 3px #ccc;
+    -moz-box-shadow: 3px 3px 3px #ccc;
+    box-shadow: 3px 3px 3px #ccc;
+    .first {
+    	border-right: 1px #d5d5d5 solid;
+    }
+    .half {
+	    width: calc(40% - 1px);
+	    padding: 5%;
+	    float: left;
+	    font-family: gotham-medium;
+	    color: #1f1f1f;
+	    border-bottom: 1px #d5d5d5 solid;
+    	ul {
+    	    width: 260px;
+    		margin: 0px auto;
+			li {
+			    padding: 11px 0 11px 50px;
+			    list-style: none;
+			    background-repeat: no-repeat;
+			    background-position: left center;
+			    background-size: 22px;
+			    margin-bottom: 6px;
+    		}
+    		.map {
+				background-image: url(/assets/images/map.png);
+			}
+    		.ema {
+				background-image: url(/assets/images/ema.png);
+			}
+    		.pho {
+				background-image: url(/assets/images/pho.png);
+			}
+    	}
+    }
+    .innwra {
+	    display: inline-block;
+	    margin: 5% 5% 0% 5%;
+	    h2 {
+	    	margin-top: 0;
+	    	font-family: gotham-book;
+    		color: #004100;
+		    font-size: 33px;
+	    }
+	    .info {
+		    font-family: gotham-book;
+		    color: #004100;
+		    font-size: 22px;
+		}
+	    form {
+			.submitt {
+			    text-align: center;
+			    display: block;
+			    background-color: #004100;
+			    border-radius: 30px;
+			    color: #eaeaea;
+			    font-family: gotham-bold;
+			    font-size: 19px;
+			    width: 210px;
+			    padding: 1%;
+			    margin: 0px auto;
+			    margin-bottom: 7%;
+			    border: unset;
+			    clear: both;
+			    margin-top: 131px;
+			    margin-bottom: 50px;
+			}
+			input[type="text"], input[type="email"] {
+			    width: 45.5%;
+			    border: unset;
+			    background-color: #e5e5e5;
+			    padding: 10px;
+			    border-radius: 5px;
+			    margin-bottom: 33px;
+			}
+			.fname, .job, .email {
+				float: left;
+			}
+			.lname, .phone, .state {
+				float: right;
+			}
+			.company {
+				width: 98% !important;
+			}
+			.radios {
+			    width: 22%;
+			    padding: 0% 5%;
+			    float: left;
+			    margin-bottom: 11px;
+			    label {
+			    	margin-left: 11px;
+			    }
+			}
+	    }
+	}
+}
+
+@media (max-width: 760px) {
+	.box .half {
+	    width: 90%;
+	}
+	.box .first {
+ 	   border-right: unset;
+	}
+	.box .innwra form input, .box .innwra form input, .box .innwra form .company {
+	    width: 95% !important;
+	}
+	.box .innwra h2 {
+	    font-size: 30px;
+	    text-align: center;
+	}
+	.box .innwra form .radios {
+    	width: 90%;
+	}
+	input#prod, input#whol, input#reta, input#logi, input#fina, input#ship, input#othe {
+    	width: 10% !important;
+	}
+	.box .innwra form .submitt {
+		display: inline-block;
+		margin-top: 44px;
+	}
+	.submitt {
+	    padding: 2%;
+	    width: 60% !important;
+	    float: none;
+	    display: block;
+	}
+}

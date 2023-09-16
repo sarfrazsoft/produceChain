@@ -1,0 +1,93 @@
+.menuar {
+	position: absolute;
+  top: 75px;
+  left: 0;
+  padding: 3%;
+  width: 13%;
+  float: left;
+	BACKGROUND-COLOR: #007900;
+  height: 100%;
+  margin-top: -3px;
+  font-family: ProximaNovaRegular;
+  .homi {    
+	 	background: url('/assets/images/home_inactive.png') no-repeat ;
+    padding-left: 33px;
+    &.active-link, &:hover {
+    	background: url('/assets/images/homico.png') no-repeat ;
+  	}
+  }
+  .menava {
+    margin: 0px auto;
+    display: block;
+  }
+  .ordi {    
+	 	background: url('/assets/images/ordico.png') no-repeat ;
+    padding-left: 33px;
+    &.active-link, &:hover {
+    	background: url('/assets/images/orders_active.png') no-repeat ;
+  	}
+  }
+  .proi {    
+	 	background: url('/assets/images/proico.png') no-repeat ;
+    padding-left: 33px;
+    &.active-link, &:hover {
+    	background: url('/assets/images/produce_active.png') no-repeat ;
+  	}
+  }
+  .msco {    
+	 	background: url('/assets/images/messco.png') no-repeat ;
+    padding-left: 33px;
+    &.active-link, &:hover {
+    	background: url('/assets/images/messages_active.png') no-repeat ;
+  	}
+  }
+  .acci {    
+	 	background: url('/assets/images/accico.png') no-repeat ;
+    padding-left: 33px;
+    &.active-link, &:hover {
+    	background: url('/assets/images/account_active.png') no-repeat ;
+  	}
+  }
+  .logi {    
+	 	background: url('/assets/images/turico.png') no-repeat ;
+    padding-left: 33px;
+    &.active-link, &:hover {
+    	background: url('/assets/images/logout_active.png') no-repeat ;
+  	}
+  }
+	.namtxt {
+	    color: #fff;
+	    font-size: 18px;
+	    margin: 0px auto;
+	    display: block;
+	    text-align: center;
+	    margin-top: 15px;
+    	margin-bottom: 5px;
+	}
+	.ematxt {
+	    color: #fff;
+	    font-size: 12px;
+	    margin: 0px auto;
+	    display: block;
+	    text-align: center;
+	}
+	.mename {
+		color: #fff;
+	    font-size: 14px;
+	    margin-top: 30px;
+	    margin-bottom: 20px;
+	}
+	a {
+		margin-bottom: 20px;
+		display: block;
+		color: #cccccc;
+	    font-size: 15px;
+		img {
+		    float: left;
+	    	margin-right: 20px;
+		}
+	}
+}
+img {
+	width: auto;
+}

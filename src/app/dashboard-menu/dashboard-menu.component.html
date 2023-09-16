@@ -1,0 +1,14 @@
+<div id="outer" [ngClass]="'menuar promen'">
+	<img src="assets/images/members/menava.png" [ngClass]="'menava'">
+	<p [ngClass]="'namtxt'">Pauls Produce Co.</p>
+	<p [ngClass]="'ematxt'">paulsproduce@gmail.com</p>
+	<p [ngClass]="'mename'">MENU</p>
+
+	<a routerLink="/dashboard-home" routerLinkActive="active-link" [ngClass]="'homi'" [routerLinkActiveOptions]="{exact: true}"> Home</a>
+	<a routerLink="/dashboard-home/orders" routerLinkActive="active-link" [ngClass]="'ordi'" [routerLinkActiveOptions]="{exact: true}">Orders</a>
+	<a routerLink="/dashboard-home/produce" routerLinkActive="active-link" [ngClass]="'proi'" [routerLinkActiveOptions]="{exact: true}">Produce</a>
+	<a routerLink="/dashboard-home/messages" routerLinkActive="active-link" [ngClass]="'msco'" [routerLinkActiveOptions]="{exact: true}">Messages</a>
+	<a routerLink="/dashboard-home/account" routerLinkActive="active-link" [ngClass]="'acci'" [routerLinkActiveOptions]="{exact: true}">Account</a>
+	<a routerLink="/signin2" routerLinkActive="active-link" [ngClass]="'logi'" [routerLinkActiveOptions]="{exact: true}">Logout</a>
+
+</div>

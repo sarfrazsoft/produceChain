@@ -1,0 +1,71 @@
+<app-buyer-dashboard-header></app-buyer-dashboard-header>
+<app-buyer-dashboard-menu></app-buyer-dashboard-menu>
+
+<div [ngClass]="'bodye'">
+
+	<p  [ngClass]="'tabhea'">Select Your Product Group</p>
+
+	<form>
+
+		<input type="text" placeholder="Search for Product Groups" [formControl]="myControl" [matAutocomplete]="auto"  [ngClass]="'crch'" (click)="onSrchClick()">
+
+		<mat-autocomplete #auto="matAutocomplete" (optionSelected)="onSelectionChanged($event)">
+		  <mat-option *ngFor="let option of filteredOptions | async" [value]="option">{{option}}</mat-option>
+		</mat-autocomplete>
+
+		<button [ngClass]="'next'" mat-button >Submit</button>
+
+		<div [ngClass]="'pgdiv'" *ngIf="!isHidden">
+			<img src="assets/images/pgico.png">
+			<p>Select your product group from the list, preview it or directly add to your cart and proceed to order.</p>
+		</div>
+
+	</form>
+
+	<div  *ngIf="isSelected">
+		<div [ngClass]="'product'" *ngFor="let product of prodataSource">
+			<img [ngClass]="'proimg'" src="assets/images/products/pnimg1.png">
+			<div [ngClass]="'lefti'">
+				<p [ngClass]="'group'">{{product.group}}</p>
+				<p [ngClass]="'code'">Code: {{product.code}}</p>	
+			</div>
+			
+			<div [ngClass]="'rigti'">
+				<p [ngClass]="'type'">{{product.type}}</p>
+				<div [ngClass]="'rating'" *ngIf="product.rating === 1">
+					<mat-icon>star</mat-icon>
+				</div>
+				<div [ngClass]="'rating'" *ngIf="product.rating === 2">
+					<mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+				</div>
+				<div [ngClass]="'rating'" *ngIf="product.rating === 3">
+					<mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+				</div>
+				<div [ngClass]="'rating'" *ngIf="product.rating === 4">
+					<mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon>
+				</div>
+		  	<div [ngClass]="'rating'" *ngIf="product.rating === 5">
+		  		<mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star</mat-icon><mat-icon>star
+		  		</mat-icon><mat-icon>star</mat-icon>
+		  	</div>				
+			</div>
+
+		  <p [ngClass]="'price_per_unit'">Unit Price:<span> {{product.price_per_unit}}</span>$</p>
+			<p [ngClass]="'units'">Number of units:<img src="assets/images/decrem.png" (click)="onDecrement()"><span>{{counter}}</span><img src="assets/images/increm.png" (click)="onIncrement()"></p>
+
+			<span [ngClass]="'linbrk'"></span>
+
+			<p [ngClass]="'total'">Total: ${{product.price_per_unit * counter}}</p>
+
+			<button [ngClass]="'info'" mat-button >Product Info</button>
+			<button [ngClass]="'cart'" mat-button >Add to Cart</button>
+
+		</div>
+	</div>
+
+</div>
+
+
+
+
+

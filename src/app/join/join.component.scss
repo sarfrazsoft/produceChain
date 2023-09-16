@@ -1,0 +1,120 @@
+img {
+	width: auto;
+}
+
+.fulhei {
+	background-image: url(/assets/images/login.jpg);
+	height: 100%;
+	background-size: cover;
+	.wrapp {
+		padding: 3% 6%;
+	    display: inline-block;
+	    width: 88%;
+	    height: 88%;
+	}
+	.botlef {
+	    width: 40%;
+	    position: absolute;
+	    bottom: 0;
+	    left: 0;
+	    padding: 2% 6%;
+	    color: #fff;
+	}
+	.botrig {
+	    width: 40%;
+	    color: #fff;
+	    position: absolute;
+	    bottom: 0;
+	    right: 0;
+	    padding: 2% 6%;
+	    text-align: right;
+	}
+	p {
+		font-family: ProximaNovaRegular;
+		font-size: 14px;
+		span {
+		    font-weight: bold;
+		}
+	}
+	.central {
+	    margin: 0px auto;
+	    display: block;
+	    width: 696px;
+	    height: 470px;
+	    margin-top: 5%;
+	    background: #fff;
+    	border-radius: 5px;
+	    img {
+		    margin: 0px auto;
+		    display: block;
+		    top: -24px;
+    		position: relative;
+    		&.tootip {
+			    float: left;
+			    top: 12px;
+			    margin-left: 12px;
+			}
+		}
+		.headin {
+		    font-family: ProximaNovaRegular;
+		    font-size: 24px;
+		    color: #354052;
+		    text-align: center;
+		    margin-block-start: 0px;
+
+		}
+		input {
+		    display: block;
+		    margin: 0px auto;
+		    border: 1px solid #dfe3e9;
+		    border-radius: 3px;
+		    padding: 11px;
+		    width: 240px;
+    		margin-bottom: 20px;
+			font-family: ProximaNovaRegular;
+    		font-size: 15px;
+    		&.tos {
+			    display: unset;
+			    clear: both;
+			    float: left;
+			    margin-left: 22%;
+			    width: 55px;
+			    top: 3px;
+			    position: relative;
+			}
+		}
+		label {
+			&.toslab {
+				clear: both;
+			    float: left;
+			    display: inline-block;
+			    margin-left: 18%;
+			    color: #354052;
+    			font-family: ProximaNovaRegular;
+    			font-size: 15px;
+			}
+		}
+		a.submitt {
+			width: 120px;
+		    clear: both;
+		    top: 23px;
+		    position: relative;
+		    background: url(/assets/images/rigaro.png) no-repeat scroll 90px 13px;
+			color: #fff;
+    		background-color: #36ae46;
+    		margin: 0px auto;
+		    display: block;
+		    padding: 8px;
+		    border-radius: 3px;
+		    text-align: center;
+		    padding-left: 0px;
+    	}
+		.userid {
+		    float: left;
+		    margin-left: 31%;
+		}		
+	}
+}
+::ng-deep .setwid {
+    width: 77px;
+}

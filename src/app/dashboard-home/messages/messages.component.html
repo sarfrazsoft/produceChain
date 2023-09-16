@@ -1,0 +1,17 @@
+<app-dashboard-header></app-dashboard-header>
+<app-dashboard-menu></app-dashboard-menu>
+
+<div [ngClass]="'bodye'">
+
+	<div  [ngClass]="'ffulwidt'">
+
+		<p  [ngClass]="'tabhea'">Messages</p> 
+
+		<mat-form-field [ngClass]="'ffield'">
+		  <input matInput (keyup)="applyCurrFilter($event.target.value)" placeholder="Search" [ngClass]="'finput'">
+		  <mat-icon matSuffix [ngClass]="'ficon'">search</mat-icon>
+		</mat-form-field>
+		
+	</div>
+	
+</div>
